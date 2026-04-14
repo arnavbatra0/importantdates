@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligence Agencies | Arnav Batra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .search-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        #agencySearch {
+            width: 100%;
+            padding: 15px 20px;
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: var(--text-main);
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        #agencySearch:focus {
+            border-color: var(--accent-yellow);
+            box-shadow: 0 0 10px rgba(255, 191, 0, 0.2);
+        }
+
+        .agency-table {
+            width: 100%;
+            max-width: 900px;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+
+        .agency-table th, .agency-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+            font-size: 0.95rem;
+        }
+
+        .agency-table th {
+            background-color: #1a1a1a;
+            color: var(--accent-yellow);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            position: sticky;
+            top: 0;
+        }
+
+        .country-name {
+            font-weight: bold;
+            color: var(--text-main);
+            width: 20%;
+        }
+
+        .agency-name {
+            color: var(--accent-yellow);
+            font-weight: bold;
+        }
+
+        .agency-desc {
+            font-size: 0.85rem;
+            color: #aaa;
+            display: block;
+            margin-top: 4px;
+        }
+
+        .imp-tag {
+            background: var(--accent-yellow);
+            color: #000;
+            font-size: 0.6rem;
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-left: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            vertical-align: middle;
+        }
+
+        .back-home {
+            margin: 20px 0 40px;
+            text-decoration: none;
+            color: var(--text-dim);
+            display: inline-block;
+        }
+
+        .back-home:hover { color: var(--accent-yellow); }
+    </style>
+</head>
+<body>
+
+    <div class="top-credit">By Arnav Batra</div>
+
+    <div class="sticky-note">
+        <p>We don't charge you anything, not earning from this.</p>
+    </div>
+
+    <header>
+        <h1>INTELLIGENCE AGENCIES</h1>
+        <p>Global Intelligence & Security Organizations</p>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="agencySearch" onkeyup="searchTable()" placeholder="Search by country, agency name, or abbreviation...">
+    </div>
+
+    <table class="agency-table" id="agencyTable">
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Intelligence Agency</th>
+                <th>Focus / Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="country-name">India<span class="imp-tag">Important</span></td>
+                <td><span class="agency-name">RAW</span> (Research and Analysis Wing)</td>
+                <td class="agency-desc">External intelligence gathering and covert operations.</td>
+            </tr>
+            <tr>
+                <td class="country-name">India</td>
+                <td><span class="agency-name">IB</span> (Intelligence Bureau)</td>
+                <td class="agency-desc">Internal security and counter-intelligence within India.</td>
+            </tr>
+            <tr>
+                <td class="country-name">Israel<span class="imp-tag">Important</span></td>
+                <td><span class="agency-name">Mossad</span></td>
+                <td class="agency-desc">Foreign intelligence gathering, covert ops, and counter-terrorism.</td>
+            </tr>
+            <tr>
+                <td class="country-name">Israel</td>
+                <td><span class="agency-name">Shin Bet</span> (Israel Security Agency)</td>
+                <td class="agency-desc">Internal security, counter-terrorism, and counter-espionage.</td>
+            </tr>
+            <tr>
+                <td class="country-name">USA<span class="imp-tag">Important</span></td>
+                <td><span class="agency-name">CIA</span> (Central Intelligence Agency)</td>
+                <td class="agency-desc">Gathers international intelligence to support foreign policy.</td>
+            </tr>
+            <tr>
+                <td class="country-name">USA</td>
+                <td><span class="agency-name">FBI</span> (Federal Bureau of Investigation)</td>
+                <td class="agency-desc">Internal intelligence, counter-terrorism, and federal criminal investigations.</td>
+            </tr>
+            <tr>
+                <td class="country-name">USA</td>
+                <td><span class="agency-name">NSA</span> (National Security Agency)</td>
+                <td class="agency-desc">Specializes in signals intelligence (SIGINT) and information assurance.</td>
+            </tr>
+            <tr>
+                <td class="country-name">Pakistan<span class="imp-tag">Important</span></td>
+                <td><span class="agency-name">ISI</span> (Inter-Services Intelligence)</td>
+                <td class="agency-desc">Premier intelligence agency of Pakistan.</td>
+            </tr>
+            <tr>
+                <td class="country-name">United Kingdom<span class="imp-tag">Important</span></td>
+                <td><span class="agency-name">MI6</span> (Secret Intelligence Service / SIS)</td>
+                <td class="agency-desc">Foreign intelligence gathering and overseas operations.</td>
+            </tr>
+            <tr>
+                <td class="country-name">United Kingdom</td>
+                <td><span class="agency-name">MI5</span> (Security Service)</td>
+                <td class="agency-desc">Domestic security and counter-intelligence within the UK.</td>
+            </tr>
+            <tr>
+                <td class="country-name">United Kingdom</td>
+                <td><span class="agency-name">GCHQ</span> (Gov. Communications Headquarters)</td>
+                <td class="agency-desc">Signals intelligence (SIGINT) and information security.</td>
+            </tr>
+            <tr>
+                <td class="country-name">Russia<span class="imp-tag">Important</span></td>
+                <td><span class="agency-name">FSB</span> (Federal Security Service)</td>
+                <td class="agency-desc">Internal security, counter-intelligence, and counter-terrorism.</td>
+            </tr>
+            <tr>
+                <td class="country-name">Russia</td>
+                <td><span class="agency-name">SVR</span> (Foreign Intelligence Service)</td>
+                <td class="agency-desc">Conducts external intelligence operations.</td>
+            </tr>
+            <tr>
+                <td class="country-name">Russia</td>
+                <td><span class="agency-name">GRU</span> (Main Directorate)</td>
+                <td class="agency-desc">Military intelligence, signal intelligence, and special operations.</td>
+            </tr>
+            <tr>
+                <td class="country-name">China<span class="imp-tag">Important</span></td>
+                <td><span class="agency-name">MSS</span> (Ministry of State Security)</td>
+                <td class="agency-desc">Foreign intelligence and counter-intelligence operations.</td>
+            </tr>
+            <tr>
+                <td class="country-name">China</td>
+                <td><span class="agency-name">PLASSF</span> (PLA Strategic Support Force)</td>
+                <td class="agency-desc">Responsible for space, cyber, and electronic warfare.</td>
+            </tr>
+            <tr>
+                <td class="country-name">France</td>
+                <td><span class="agency-name">DGSE</span></td>
+                <td class="agency-desc">Directorate-General for External Security (Foreign ops).</td>
+            </tr>
+            <tr>
+                <td class="country-name">France</td>
+                <td><span class="agency-name">DGSI</span></td>
+                <td class="agency-desc">General Directorate for Internal Security.</td>
+            </tr>
+            <tr>
+                <td class="country-name">Germany</td>
+                <td><span class="agency-name">BND</span> (Bundesnachrichtendienst)</td>
+                <td class="agency-desc">Germany's foreign intelligence agency.</td>
+            </tr>
+            <tr>
+                <td class="country-name">Germany</td>
+                <td><span class="agency-name">BfV</span></td>
+                <td class="agency-desc">Federal Office for the Protection of the Constitution (Domestic).</td>
+            </tr>
+            <tr>
+                <td class="country-name">Canada</td>
+                <td><span class="agency-name">CSIS</span></td>
+                <td class="agency-desc">Canadian Security Intelligence Service (Domestic & International).</td>
+            </tr>
+            <tr>
+                <td class="country-name">Canada</td>
+                <td><span class="agency-name">CSE</span></td>
+                <td class="agency-desc">Communications Security Establishment (Cyber & electronic surveillance).</td>
+            </tr>
+            <tr>
+                <td class="country-name">Australia</td>
+                <td><span class="agency-name">ASIS</span></td>
+                <td class="agency-desc">Australian Secret Intelligence Service.</td>
+            </tr>
+            <tr>
+                <td class="country-name">South Africa</td>
+                <td><span class="agency-name">NIA</span></td>
+                <td class="agency-desc">National Intelligence Agency.</td>
+            </tr>
+            <tr>
+                <td class="country-name">Egypt</td>
+                <td><span class="agency-name">Mukhabarat</span></td>
+                <td class="agency-desc">Egyptian General Intelligence Directorate.</td>
+            </tr>
+            <tr>
+                <td class="country-name">Japan</td>
+                <td><span class="agency-name">Naicho</span></td>
+                <td class="agency-desc">Cabinet Intelligence and Research Office.</td>
+            </tr>
+            <tr>
+                <td class="country-name">Iran</td>
+                <td><span class="agency-name">SAVAK</span></td>
+                <td class="agency-desc">Sazamane Etelaatva Amniate Kechvar.</td>
+            </tr>
+            <tr>
+                <td class="country-name">Iraq</td>
+                <td><span class="agency-name">General Security Directorate</span></td>
+                <td class="agency-desc">Internal state security.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Terminal</a>
+
+    <footer>
+        <p>© 2026 | Built for Students | By Arnav Batra</p>
+    </footer>
+
+    <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, j, txtValue;
+            input = document.getElementById("agencySearch");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("agencyTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 1; i < tr.length; i++) {
+                tr[i].style.display = "none";
+                td = tr[i].getElementsByTagName("td");
+                for (j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
