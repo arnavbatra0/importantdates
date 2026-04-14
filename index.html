@@ -1,238 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Important National & International Days</title>
-<style>
-body {
-  margin: 0;
-  padding: 15px;
-  font-family: "Trebuchet MS", "Comic Sans MS", sans-serif;
-  background: #fffef5;
-  background-image:
-    linear-gradient(rgba(255,220,80,0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,220,80,0.1) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-.page {
-  max-width: 1200px;
-  margin: auto;
-  background: white;
-  border: 3px solid #f4c542;
-  border-radius: 18px;
-  padding: 20px;
-  box-shadow: 8px 8px 0 #ffe680;
-}
-h1 { text-align:center; color:#9a6b00; }
-.author, .luck { text-align:center; margin:10px 0; }
-.luck {
-  background:#fff7cc;
-  border:2px dashed #f4c542;
-  padding:10px;
-  border-radius:12px;
-}
-.sticky {
-  background:#fff59d;
-  padding:15px;
-  margin:20px auto;
-  border:2px solid #d4a514;
-  box-shadow:5px 5px 0 #f4c542;
-  border-radius:8px;
-  text-align:center;
-  font-weight:bold;
-}
-.filter-box {
-  text-align:center;
-  margin:20px 0;
-}
-select {
-  padding:10px;
-  border-radius:10px;
-  border:2px solid #f4c542;
-}
-.buttons {
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-bottom:20px;
-}
-.btn {
-  text-decoration:none;
-  background:#ffe680;
-  color:#222;
-  padding:10px 18px;
-  border:2px solid #d4a514;
-  border-radius:12px;
-  font-weight:bold;
-}
-.table-wrap { overflow-x:auto; }
-table {
-  width:100%;
-  border-collapse:collapse;
-}
-th, td {
-  border:2px solid #f2d15f;
-  padding:10px;
-  text-align:left;
-}
-th { background:#fff2a8; }
-tr:nth-child(even) { background:#fffdf0; }
-
-@media(max-width:768px){
-  h1 { font-size:1.5rem; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Terminal | Arnav Batra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-<div class="page">
-  <h1>Important National & International Days</h1>
-  <div class="author">By Arnav Batra</div>
-  <div class="luck">✨ Best of luck — revise daily, win confidently! ✨</div>
 
-  <div id="stickyNote" class="sticky">📌 Loading important day...</div>
+    <div class="top-credit">By Arnav Batra</div>
 
-  <div class="buttons">
-    <a class="btn" href="https://linktr.ee/arnavbatrain">🔗 Linktree</a>
-    <a class="btn" href="instagram.com/arnavbatra9366">📷 Instagram</a>
-  </div>
+    <div class="sticky-note">
+        <p>We don't charge you anything, not earning from this.</p>
+    </div>
 
-  <div class="filter-box">
-    <label><b>📅 Filter by Month:</b></label>
-    <select id="monthFilter">
-      <option value="All">All</option>
-      <option>January</option>
-      <option>February</option>
-      <option>March</option>
-      <option>April</option>
-      <option>May</option>
-      <option>June</option>
-      <option>July</option>
-      <option>August</option>
-      <option>September</option>
-      <option>October</option>
-      <option>November</option>
-      <option>December</option>
-    </select>
-  </div>
+    <header>
+        <h1>EXAM RESOURCE HUB</h1>
+        <p>Consolidated study sources for competitive excellence</p>
+    </header>
 
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Month</th>
-          <th>Day</th>
-        </tr>
-      </thead>
-      <tbody id="tableBody"></tbody>
-    </table>
-  </div>
-</div>
+    <div class="container">
+        <a href="YOUR_NOTION_LINK_HERE" target="_blank" class="card highlight">
+            <i class="fas fa-terminal"></i>
+            <span>Master Terminal (Everything)</span>
+        </a>
 
-<script>
-const days = [
-  {date:"12-Jan", month:"January", day:"National Youth Day"},
-  {date:"24-Jan", month:"January", day:"National Girl Child Day"},
-  {date:"25-Jan", month:"January", day:"National Tourism Day"},
-  {date:"25-Jan", month:"January", day:"National Voters Day"},
-  {date:"26-Jan", month:"January", day:"Republic Day, International Customs Day"},
-  {date:"30-Jan", month:"January", day:"Martyrs' Day, World Leprosy Eradication Day"},
+        <a href="dates.html" class="card">
+            <i class="fas fa-calendar-alt"></i>
+            <span>Important Dates & Days</span>
+        </a>
 
-  {date:"4-Feb", month:"February", day:"World Cancer Day"},
-  {date:"21-Feb", month:"February", day:"International Mother Language Day"},
-  {date:"28-Feb", month:"February", day:"National Science Day"},
+        <a href="orgs.html" class="card">
+            <i class="fas fa-globe"></i>
+            <span>World Organizations & HQs</span>
+        </a>
 
-  {date:"2nd Monday", month:"March", day:"Commonwealth Day"},
-  {date:"2nd Thursday", month:"March", day:"World Kidney Day"},
-  {date:"3-Mar", month:"March", day:"National Defence Day"},
-  {date:"8-Mar", month:"March", day:"International Women's Day"},
-  {date:"16-Mar", month:"March", day:"National Vaccination Day"},
+        <a href="parliaments.html" class="card">
+            <i class="fas fa-landmark"></i>
+            <span>Parliaments of Countries</span>
+        </a>
+    </div>
 
-  {date:"7-Apr", month:"April", day:"World Health Day"},
-  {date:"25-Apr", month:"April", day:"World Malaria Day"},
+    <footer>
+        <div class="social-links">
+            <a href="YOUR_LINKTREE_LINK" target="_blank"><i class="fas fa-tree"></i> Linktree</a>
+            <a href="YOUR_INSTAGRAM_LINK" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="YOUR_TWITTER_LINK" target="_blank"><i class="fab fa-x-twitter"></i> Twitter</a>
+        </div>
+        <p>© 2024 | Built for Students</p>
+    </footer>
 
-  {date:"1-May", month:"May", day:"Workers' Day (International Labour Day)"},
-  {date:"2nd Sunday", month:"May", day:"Mother's Day"},
-  {date:"8-May", month:"May", day:"World Red Cross Day"},
-  {date:"31-May", month:"May", day:"World No Tobacco Day"},
-
-  {date:"5-Jun", month:"June", day:"World Environment Day"},
-  {date:"12-Jun", month:"June", day:"World Day against Child Labour"},
-  {date:"14-Jun", month:"June", day:"World Blood Donor Day"},
-  {date:"23-Jun", month:"June", day:"International Olympic Day, UN Public Service Day"},
-  {date:"26-Jun", month:"June", day:"International Day against Drug Abuse"},
-
-  {date:"1-Jul", month:"July", day:"National Doctors Day"},
-  {date:"11-Jul", month:"July", day:"World Population Day"},
-
-  {date:"6-Aug", month:"August", day:"Hiroshima Day"},
-  {date:"6-Aug", month:"August", day:"Organ Donation Day"},
-  {date:"9-Aug", month:"August", day:"Indigenous People Day / Nagasaki Day / Quit India Movement Day"},
-  {date:"12-Aug", month:"August", day:"International Youth Day"},
-  {date:"19-Aug", month:"August", day:"World Humanitarian Day"},
-  {date:"23-Aug", month:"August", day:"National Space Day"},
-
-  {date:"5-Sep", month:"September", day:"Teachers' Day"},
-  {date:"8-Sep", month:"September", day:"International Literacy Day"},
-  {date:"14-Sep", month:"September", day:"Hindi Diwas"},
-  {date:"16-Sep", month:"September", day:"World Ozone Day"},
-  {date:"21-Sep", month:"September", day:"World Alzheimer's Day / Peace Day"},
-  {date:"29-Sep", month:"September", day:"World Heart Day"},
-  {date:"23-Sep", month:"September", day:"International Day of Sign Languages"},
-
-  {date:"3-Oct", month:"October", day:"World Nature Day"},
-  {date:"8-Oct", month:"October", day:"Indian Air Force Day"},
-  {date:"2nd Thursday", month:"October", day:"World Sight Day"},
-  {date:"16-Oct", month:"October", day:"World Food Day"},
-  {date:"24-Oct", month:"October", day:"UN Day"},
-
-  {date:"7-Nov", month:"November", day:"National Cancer Awareness Day"},
-  {date:"26-Nov", month:"November", day:"Constitution Day"},
-
-  {date:"1-Dec", month:"December", day:"World AIDS Day"},
-  {date:"4-Dec", month:"December", day:"Indian Navy Day"},
-  {date:"10-Dec", month:"December", day:"Human Rights Day"},
-  {date:"23-Dec", month:"December", day:"Kisan Diwas"}
-];
-
-const tableBody = document.getElementById("tableBody");
-const filter = document.getElementById("monthFilter");
-
-function renderTable() {
-  const selected = filter.value;
-  tableBody.innerHTML = "";
-  days.filter(d => selected === "All" || d.month === selected)
-      .forEach(d => {
-        tableBody.innerHTML += `
-          <tr>
-            <td>${d.date}</td>
-            <td>${d.month}</td>
-            <td>${d.day}</td>
-          </tr>
-        `;
-      });
-}
-filter.addEventListener("change", renderTable);
-renderTable();
-
-function updateSticky() {
-  const now = new Date();
-  const today = now.getDate();
-  const month = now.toLocaleString("default", {month:"long"});
-
-  const exact = days.find(d => d.month === month && d.date.startsWith(today));
-  const note = document.getElementById("stickyNote");
-
-  if (exact) {
-    note.innerHTML = "🎉 Today: " + exact.day;
-  } else {
-    const upcoming = days.find(d => d.month === month);
-    note.innerHTML = "📌 Upcoming this month: " + upcoming.day;
-  }
-}
-updateSticky();
-</script>
 </body>
 </html>
