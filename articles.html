@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constitution Articles | Arnav Batra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --card-bg: #111;
+            --text-main: #eee;
+            --text-dim: #888;
+            --accent-yellow: #ffbf00;
+        }
+
+        body { background-color: #000; color: var(--text-main); font-family: sans-serif; padding: 20px; }
+
+        .search-container { width: 100%; max-width: 900px; margin: 20px auto; }
+        
+        #artSearch {
+            width: 100%;
+            padding: 15px;
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        .art-table {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto 50px;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .art-table th, .art-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #222;
+        }
+
+        .art-table th {
+            background-color: #1a1a1a;
+            color: var(--accent-yellow);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .art-num { font-weight: bold; color: var(--accent-yellow); width: 15%; }
+        .art-title { width: 25%; font-weight: 600; }
+        .art-desc { color: var(--text-dim); font-size: 0.9rem; }
+
+        /* --- MOBILE RESPONSIVE FIX --- */
+        @media screen and (max-width: 600px) {
+            .art-table thead { display: none; }
+            
+            .art-table, .art-table tbody, .art-table tr, .art-table td {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .art-table tr {
+                margin-bottom: 15px;
+                border: 1px solid #333;
+                border-radius: 8px;
+                padding: 12px;
+            }
+
+            .art-table td {
+                border: none;
+                padding: 5px 0;
+            }
+
+            /* Article Number as Header */
+            .art-num {
+                font-size: 1.2rem;
+                border-bottom: 1px solid var(--accent-yellow);
+                margin-bottom: 10px;
+                padding-bottom: 5px !important;
+            }
+
+            .art-title {
+                color: #fff;
+                font-size: 1rem;
+                display: block;
+            }
+
+            .art-desc {
+                display: block;
+                margin-top: 8px;
+                line-height: 1.4;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header style="text-align: center;">
+        <h1 style="color: var(--accent-yellow);">IMPORTANT ARTICLES</h1>
+        <p>Indian Constitution Reference for Competitive Exams</p>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="artSearch" onkeyup="searchTable()" placeholder="Search article, keyword (e.g. 'President', 'Rights')...">
+    </div>
+
+    <table class="art-table" id="artTable">
+        <thead>
+            <tr>
+                <th>Article</th>
+                <th>Subject</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td class="art-num">Art. 1-4</td><td class="art-title">Union & Its Territory</td><td class="art-desc">Name and territory of the Union; Admission of new states.</td></tr>
+            
+            <tr><td class="art-num">Art. 14</td><td class="art-title">Equality</td><td class="art-desc">Equality before law and equal protection of laws.</td></tr>
+            <tr><td class="art-num">Art. 17</td><td class="art-title">Untouchability</td><td class="art-desc">Abolition of untouchability and prohibition of its practice.</td></tr>
+            <tr><td class="art-num">Art. 19</td><td class="art-title">Freedoms</td><td class="art-desc">Protection of 6 rights: Speech, Assembly, Association, Movement, Residence, Profession.</td></tr>
+            <tr><td class="art-num">Art. 21</td><td class="art-title">Life & Liberty</td><td class="art-desc">Protection of life and personal liberty.</td></tr>
+            <tr><td class="art-num">Art. 32</td><td class="art-title">Remedies</td><td class="art-desc">Right to move Supreme Court for enforcement of Fundamental Rights (Heart & Soul).</td></tr>
+
+            <tr><td class="art-num">Art. 44</td><td class="art-title">UCC</td><td class="art-desc">Uniform Civil Code for the citizens.</td></tr>
+            <tr><td class="art-num">Art. 51A</td><td class="art-title">Duties</td><td class="art-desc">Fundamental Duties of citizens (Added by 42nd Amendment).</td></tr>
+
+            <tr><td class="art-num">Art. 52</td><td class="art-title">President</td><td class="art-desc">The President of India.</td></tr>
+            <tr><td class="art-num">Art. 61</td><td class="art-title">Impeachment</td><td class="art-desc">Procedure for impeachment of the President.</td></tr>
+            <tr><td class="art-num">Art. 79</td><td class="art-title">Parliament</td><td class="art-desc">Constitution of Parliament (President, Lok Sabha, Rajya Sabha).</td></tr>
+            <tr><td class="art-num">Art. 80/81</td><td class="art-title">RS / LS</td><td class="art-desc">Composition of Rajya Sabha (80) and Lok Sabha (81).</td></tr>
+            <tr><td class="art-num">Art. 93</td><td class="art-title">Speaker</td><td class="art-desc">The Speaker and Deputy Speaker of the House of the People.</td></tr>
+
+            <tr><td class="art-num">Art. 124</td><td class="art-title">Supreme Court</td><td class="art-desc">Establishment and Constitution of Supreme Court.</td></tr>
+            
+            <tr><td class="art-num">Art. 356</td><td class="art-title">President's Rule</td><td class="art-desc">Provisions in case of failure of constitutional machinery in States.</td></tr>
+
+            <tr><td class="art-num">Art. 324</td><td class="art-title">Elections</td><td class="art-desc">Superintendence, direction, and control of elections to be vested in an Election Commission.</td></tr>
+            <tr><td class="art-num">Art. 325</td><td class="art-title">Electoral Lists</td><td class="art-desc">No person to be ineligible for inclusion in electoral rolls on grounds of religion, race, caste or sex.</td></tr>
+
+            <tr><td class="art-num">Sched. 8</td><td class="art-title">Languages</td><td class="art-desc">Includes 22 official languages and criteria for Classical Language status (Tamil, Sanskrit, Telugu, Kannada, Malayalam, Odia).</td></tr>
+        </tbody>
+    </table>
+
+    <script>
+        function searchTable() {
+            var input = document.getElementById("artSearch");
+            var filter = input.value.toUpperCase();
+            var tr = document.getElementById("artTable").getElementsByTagName("tr");
+            for (var i = 1; i < tr.length; i++) {
+                var text = tr[i].textContent || tr[i].innerText;
+                tr[i].style.display = text.toUpperCase().indexOf(filter) > -1 ? "" : "none";
+            }
+        }
+    </script>
+</body>
+</html>
