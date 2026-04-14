@@ -69,6 +69,18 @@
             margin-left: 5px;
         }
 
+        .imp-tag {
+            background: var(--accent-yellow);
+            color: #000;
+            font-size: 0.6rem;
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-left: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            vertical-align: middle;
+        }
+
         .back-home {
             margin: 20px 0 40px;
             text-decoration: none;
@@ -93,7 +105,7 @@
     </header>
 
     <div class="search-container">
-        <input type="text" id="orgSearch" onkeyup="searchTable()" placeholder="Search by organization or city (e.g. 'WHO' or 'Geneva')...">
+        <input type="text" id="orgSearch" onkeyup="searchTable()" placeholder="Search by organization, city, or year...">
     </div>
 
     <table class="org-table" id="orgTable">
@@ -106,52 +118,100 @@
             </tr>
         </thead>
         <tbody>
-            <tr><td>UNDP <span class="abbr">(UN Dev. Programme)</span></td><td class="hq-tag">New York, USA</td><td>1965</td><td>Alexander De Croo</td></tr>
-            <tr><td>UNEP <span class="abbr">(UN Environment)</span></td><td class="hq-tag">Nairobi, Kenya</td><td>1972</td><td>Inger Anderson</td></tr>
-            <tr><td>UNFPA <span class="abbr">(Population Fund)</span></td><td class="hq-tag">New York, USA</td><td>1969</td><td>Diene Keita</td></tr>
-            <tr><td>UN-Habitat</td><td class="hq-tag">Nairobi, Kenya</td><td>1978</td><td>Anaclaudia Rossbach</td></tr>
-            <tr><td>UNICEF</td><td class="hq-tag">New York, USA</td><td>1946</td><td>Catherine M. Russell</td></tr>
-            <tr><td>WFP <span class="abbr">(World Food)</span></td><td class="hq-tag">Rome, Italy</td><td>1961</td><td>Cindy McCain</td></tr>
-            <tr><td>FAO <span class="abbr">(Food & Agriculture)</span></td><td class="hq-tag">Rome, Italy</td><td>1945</td><td>Qu Dongyu</td></tr>
-            <tr><td>BIMSTEC</td><td class="hq-tag">Dhaka, Bangladesh</td><td>1997</td><td>Indra Mani Pandey</td></tr>
-            <tr><td>SCO <span class="abbr">(Shanghai Co-op)</span></td><td class="hq-tag">Beijing, China</td><td>2001</td><td>Nurlan Yermeknbayev</td></tr>
+            <tr><td>UNDP <span class="abbr">(UN Dev. Programme)</span><span class="imp-tag">Important</span></td><td class="hq-tag">New York, USA</td><td>1965</td><td>Alexander De Croo</td></tr>
+            <tr><td>UNEP <span class="abbr">(UN Environment)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Nairobi, Kenya</td><td>1972</td><td>Inger Anderson</td></tr>
+            <tr><td>UNFPA <span class="abbr">(Population Fund)</span><span class="imp-tag">Important</span></td><td class="hq-tag">New York, USA</td><td>1969</td><td>Diene Keita</td></tr>
+            <tr><td>UN-Habitat<span class="imp-tag">Important</span></td><td class="hq-tag">Nairobi, Kenya</td><td>1978</td><td>Anaclaudia Rossbach</td></tr>
+            <tr><td>UNICEF<span class="imp-tag">Important</span></td><td class="hq-tag">New York, USA</td><td>1946</td><td>Catherine M. Russell</td></tr>
+            <tr><td>WFP <span class="abbr">(World Food)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Rome, Italy</td><td>1961</td><td>Cindy McCain</td></tr>
+            <tr><td>FAO <span class="abbr">(Food & Agriculture)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Rome, Italy</td><td>1945</td><td>Qu Dongyu</td></tr>
+            <tr><td>BIMSTEC<span class="imp-tag">Important</span></td><td class="hq-tag">Dhaka, Bangladesh</td><td>1997</td><td>Indra Mani Pandey</td></tr>
+            <tr><td>SCO <span class="abbr">(Shanghai Co-op)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Beijing, China</td><td>2001</td><td>Nurlan Yermeknbayev</td></tr>
 
-            <tr><td>ICAO <span class="abbr">(Civil Aviation)</span></td><td class="hq-tag">Montreal, Canada</td><td>1947</td><td>Juan Carlos Salazar Gomez</td></tr>
-            <tr><td>IFAD <span class="abbr">(Agri Dev)</span></td><td class="hq-tag">Rome, Italy</td><td>1977</td><td>Alvaro Lario</td></tr>
-            <tr><td>ILO <span class="abbr">(Labour)</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1919</td><td>Gilbert Houngbo</td></tr>
-            <tr><td>IMF <span class="abbr">(Monetary Fund)</span></td><td class="hq-tag">Washington DC, USA</td><td>1945</td><td>Kristalina Georgieva</td></tr>
-            <tr><td>IMO <span class="abbr">(Maritime)</span></td><td class="hq-tag">London, UK</td><td>1948</td><td>Arsenio Dominguez</td></tr>
-            <tr><td>ITU <span class="abbr">(Telecom)</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1865</td><td>Doreen Bogdan-Martin</td></tr>
-            <tr><td>UNESCO</td><td class="hq-tag">Paris, France</td><td>1945</td><td>Khaled El Enany</td></tr>
-            <tr><td>UNIDO <span class="abbr">(Industrial Dev)</span></td><td class="hq-tag">Vienna, Austria</td><td>1966</td><td>Gerd Muller</td></tr>
-            <tr><td>UNWTO <span class="abbr">(Tourism)</span></td><td class="hq-tag">Madrid, Spain</td><td>1975</td><td>Shaikha Al Nowais</td></tr>
-            <tr><td>WHO <span class="abbr">(Health)</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1948</td><td>Tedros Adhanom</td></tr>
+            <tr><td>ICAO <span class="abbr">(Civil Aviation)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Montreal, Canada</td><td>1947</td><td>Juan Carlos Salazar Gomez</td></tr>
+            <tr><td>IFAD <span class="abbr">(Agri Dev)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Rome, Italy</td><td>1977</td><td>Alvaro Lario</td></tr>
+            <tr><td>ILO <span class="abbr">(Labour)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1919</td><td>Gilbert Houngbo</td></tr>
+            <tr><td>IMF <span class="abbr">(Monetary Fund)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Washington DC, USA</td><td>1945</td><td>Kristalina Georgieva</td></tr>
+            <tr><td>IMO <span class="abbr">(Maritime)</span><span class="imp-tag">Important</span></td><td class="hq-tag">London, UK</td><td>1948</td><td>Arsenio Dominguez</td></tr>
+            <tr><td>ITU <span class="abbr">(Telecom)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1865</td><td>Doreen Bogdan-Martin</td></tr>
+            <tr><td>UNESCO<span class="imp-tag">Important</span></td><td class="hq-tag">Paris, France</td><td>1945</td><td>Khaled El Enany</td></tr>
+            <tr><td>UNIDO <span class="abbr">(Industrial Dev)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Vienna, Austria</td><td>1966</td><td>Gerd Muller</td></tr>
+            <tr><td>UNWTO <span class="abbr">(Tourism)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Madrid, Spain</td><td>1975</td><td>Shaikha Al Nowais</td></tr>
+            <tr><td>UPU <span class="abbr">(Postal Union)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Bern, Switzerland</td><td>1874</td><td>Masahiko Metoki</td></tr>
+            <tr><td>WHO <span class="abbr">(Health)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1948</td><td>Tedros Adhanom Ghebreyesus</td></tr>
 
-            <tr><td>WIPO <span class="abbr">(Intellectual Prop)</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1967</td><td>Daren Tang</td></tr>
-            <tr><td>World Bank</td><td class="hq-tag">Washington DC, USA</td><td>1944</td><td>Ajay Pal Singh Banga</td></tr>
-            <tr><td>ISA <span class="abbr">(Solar Alliance)</span></td><td class="hq-tag">Gurugram, India</td><td>2015</td><td>Ashish Khanna</td></tr>
-            <tr><td>IAEA <span class="abbr">(Atomic Energy)</span></td><td class="hq-tag">Vienna, Austria</td><td>1957</td><td>Rafael Grossi</td></tr>
-            <tr><td>WTO <span class="abbr">(World Trade)</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1995</td><td>Ngozi Okonjo-Iweala</td></tr>
+            <tr><td>WIPO <span class="abbr">(Intellectual Prop)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1967</td><td>Daren Tang</td></tr>
+            <tr><td>WMO <span class="abbr">(Meteorological)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1950</td><td>Celeste Saulo</td></tr>
+            <tr><td>World Bank<span class="imp-tag">Important</span></td><td class="hq-tag">Washington DC, USA</td><td>1944</td><td>Ajay Pal Singh Banga</td></tr>
+            <tr><td>UNAIDS<span class="imp-tag">Important</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1994</td><td>Winnie Byanyima</td></tr>
+            <tr><td>UNHCR <span class="abbr">(Refugees)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1950</td><td>Barham Salih</td></tr>
+            <tr><td>ISA <span class="abbr">(Solar Alliance)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Gurugram, India</td><td>2015</td><td>Ashish Khanna</td></tr>
+            <tr><td>UNRWA <span class="abbr">(Palestine Refugees)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Amman, Jordan</td><td>1949</td><td>Philippe Lazzarini</td></tr>
+            <tr><td>UNU <span class="abbr">(University)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Tokyo, Japan</td><td>1973</td><td>Tshilidzi Marwala</td></tr>
+            <tr><td>UNO <span class="abbr">(UN Org)</span><span class="imp-tag">Important</span></td><td class="hq-tag">New York, USA</td><td>1945</td><td>Antonio Gutteres</td></tr>
+            <tr><td>UNCTAD <span class="abbr">(Trade & Dev)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1964</td><td>Rebecca Grynspan</td></tr>
+
+            <tr><td>UN Women<span class="imp-tag">Important</span></td><td class="hq-tag">New York, USA</td><td>2010</td><td>Sima Sami Bahous</td></tr>
+            <tr><td>IAEA <span class="abbr">(Atomic Energy)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Vienna, Austria</td><td>1957</td><td>Rafael Grossi</td></tr>
+            <tr><td>IOM <span class="abbr">(Migration)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1951</td><td>Amy Pope</td></tr>
+            <tr><td>OPCW <span class="abbr">(Chemical Weapons)</span><span class="imp-tag">Important</span></td><td class="hq-tag">The Hague, Netherlands</td><td>1997</td><td>Fernando Arias</td></tr>
+            <tr><td>UNFCCC <span class="abbr">(Climate)</span><span class="imp-tag">Important</span></td><td class="hq-tag">Bonn, Germany</td><td>1994</td><td>Simon Stiell</td></tr>
+            <tr><td>WTO <span class="abbr">(World Trade)</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1995</td><td>Ngozi Okonjo Iweala</td></tr>
+            <tr><td>ITC <span class="abbr">(Trade Centre)</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1964</td><td>Pamela Coke-Hamilton</td></tr>
+            <tr><td>African Dev. Bank</td><td class="hq-tag">Abidjan, Cote d'Ivoire</td><td>1964</td><td>Akinwumi Adesina</td></tr>
+            <tr><td>African Union (AU)</td><td class="hq-tag">Addis Ababa, Ethiopia</td><td>2002</td><td>Evariste Ndayishimiye</td></tr>
             <tr><td>Amnesty International</td><td class="hq-tag">London, UK</td><td>1961</td><td>Agnès Callamard</td></tr>
 
-            <tr><td>ADB <span class="abbr">(Asian Dev Bank)</span></td><td class="hq-tag">Manila, Philippines</td><td>1966</td><td>Masato Kanda</td></tr>
+            <tr><td>Arctic Council</td><td class="hq-tag">Tromso, Norway</td><td>1996</td><td>-</td></tr>
+            <tr><td>APEC <span class="abbr">(Asia-Pacific)</span></td><td class="hq-tag">Queenstown, Singapore</td><td>1989</td><td>Lee Jae Myung</td></tr>
+            <tr><td>ADB <span class="abbr">(Asian Dev. Bank)</span></td><td class="hq-tag">Manila, Philippines</td><td>1966</td><td>Masato Kanda</td></tr>
             <tr><td>ASEAN</td><td class="hq-tag">Jakarta, Indonesia</td><td>1967</td><td>Kao Kim Hourn</td></tr>
-            <tr><td>European Union (EU)</td><td class="hq-tag">Brussels, Belgium</td><td>1993</td><td>Ursula Von Der Leyen</td></tr>
-            <tr><td>Interpol</td><td class="hq-tag">Lyon, France</td><td>1923</td><td>Lucas Phillipe</td></tr>
-            <tr><td>ICJ <span class="abbr">(Court of Justice)</span></td><td class="hq-tag">The Hague, Netherlands</td><td>1945</td><td>Yuji Iwasawa</td></tr>
-            <tr><td>ICC <span class="abbr">(Cricket Council)</span></td><td class="hq-tag">Dubai, UAE</td><td>1909</td><td>Jay Shah (Chair)</td></tr>
+            <tr><td>BIS <span class="abbr">(Settlements)</span></td><td class="hq-tag">Basel, Switzerland</td><td>1930</td><td>François Villeroy</td></tr>
+            <tr><td>BSEC <span class="abbr">(Black Sea)</span></td><td class="hq-tag">Istanbul, Turkey</td><td>1992</td><td>Lazar Comanescu</td></tr>
+            <tr><td>Commonwealth Sec.</td><td class="hq-tag">London, UK</td><td>1965</td><td>-</td></tr>
+            <tr><td>EBRD <span class="abbr">(Reconstruction)</span></td><td class="hq-tag">London, UK</td><td>1991</td><td>Odile Renaud Basso</td></tr>
+            <tr><td>ECB <span class="abbr">(Central Bank)</span></td><td class="hq-tag">Frankfurt, Germany</td><td>1998</td><td>Christine Lagarde</td></tr>
+            <tr><td>ESA <span class="abbr">(Space Agency)</span></td><td class="hq-tag">Paris, France</td><td>1975</td><td>Josef Aschbacher</td></tr>
+            <tr><td>EU <span class="abbr">(European Union)</span></td><td class="hq-tag">Brussels, Belgium</td><td>1993</td><td>Ursula Von Der Leyen</td></tr>
+            <tr><td>G7</td><td class="hq-tag">-</td><td>1975</td><td>-</td></tr>
 
-            <tr><td>OPEC</td><td class="hq-tag">Vienna, Austria</td><td>1960</td><td>Haitham Al-Ghais</td></tr>
+            <tr><td>ICC <span class="abbr">(Chamber of Commerce)</span></td><td class="hq-tag">Paris, France</td><td>1919</td><td>John W.H. Denton</td></tr>
+            <tr><td>ICC <span class="abbr">(Criminal Court)</span></td><td class="hq-tag">The Hague, Netherlands</td><td>2002</td><td>Tomoko Akane</td></tr>
+            <tr><td>Interpol</td><td class="hq-tag">Lyon, France</td><td>1923</td><td>Lucas Phillipe</td></tr>
+            <tr><td>ICRC <span class="abbr">(Red Cross)</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1863</td><td>Mirjana Spoljaric Egger</td></tr>
+            <tr><td>ICJ <span class="abbr">(Court of Justice)</span></td><td class="hq-tag">The Hague, Netherlands</td><td>1945</td><td>Yuji Iwasawa</td></tr>
+            <tr><td>IDA <span class="abbr">(Dev. Association)</span></td><td class="hq-tag">Washington DC, USA</td><td>1960</td><td>Ajay Banga</td></tr>
+            <tr><td>IFC <span class="abbr">(Finance Corp)</span></td><td class="hq-tag">Washington DC, USA</td><td>1956</td><td>Makhtar Diop</td></tr>
+            <tr><td>IRENA <span class="abbr">(Renewable Energy)</span></td><td class="hq-tag">Abu Dhabi, UAE</td><td>2009</td><td>Francesco La Camera</td></tr>
+            <tr><td>ICC <span class="abbr">(Cricket Council)</span></td><td class="hq-tag">Dubai, UAE</td><td>1909</td><td>Jay Shah (Chairman)</td></tr>
+            <tr><td>WEF <span class="abbr">(Economic Forum)</span></td><td class="hq-tag">Cologny, Switzerland</td><td>1971</td><td>Peter Brabeck Lemathe</td></tr>
+            <tr><td>IHO <span class="abbr">(Hydrographic)</span></td><td class="hq-tag">Monaco</td><td>1921</td><td>Dr. Mathias Jonas</td></tr>
+            <tr><td>ICOMOS</td><td class="hq-tag">Paris, France</td><td>1965</td><td>Teresa Paatricio</td></tr>
+
+            <tr><td>OIC <span class="abbr">(Islamic Conf)</span></td><td class="hq-tag">Jeddah, Saudi Arabia</td><td>1969</td><td>Hissein Brahim Taha</td></tr>
+            <tr><td>OPEC <span class="abbr">(Petroleum)</span></td><td class="hq-tag">Vienna, Austria</td><td>1960</td><td>Haitham Al-Ghais</td></tr>
             <tr><td>SAARC</td><td class="hq-tag">Kathmandu, Nepal</td><td>1985</td><td>Golam Sarwar</td></tr>
+            <tr><td>ESCAP <span class="abbr">(Asia-Pacific)</span></td><td class="hq-tag">Bangkok, Thailand</td><td>1947</td><td>Armida Alisjahbana</td></tr>
+            <tr><td>ESCWA <span class="abbr">(Western Asia)</span></td><td class="hq-tag">Beirut, Lebanon</td><td>1973</td><td>Rola Dashti</td></tr>
+            <tr><td>UNODC <span class="abbr">(Drugs & Crime)</span></td><td class="hq-tag">Vienna, Austria</td><td>1997</td><td>Ghada Waly</td></tr>
+            <tr><td>IUCN <span class="abbr">(Conservation)</span></td><td class="hq-tag">Gland, Switzerland</td><td>1948</td><td>Grethel Aguilar</td></tr>
             <tr><td>WWF <span class="abbr">(Nature)</span></td><td class="hq-tag">Gland, Switzerland</td><td>1961</td><td>Adil Najam</td></tr>
+
+            <tr><td>IOC <span class="abbr">(Olympic)</span></td><td class="hq-tag">Lausanne, Switzerland</td><td>1894</td><td>Kirsty Coventry</td></tr>
+            <tr><td>ISO <span class="abbr">(Standardization)</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1947</td><td>Khaled Soufi</td></tr>
+            <tr><td>ISA <span class="abbr">(Seabed Authority)</span></td><td class="hq-tag">Kingston, Jamaica</td><td>1994</td><td>Leticia Carvalho</td></tr>
+            <tr><td>IPU <span class="abbr">(Parliamentary)</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1889</td><td>Tulia Ackson</td></tr>
+            <tr><td>MIGA <span class="abbr">(Investment)</span></td><td class="hq-tag">Washington DC, USA</td><td>1988</td><td>Hiroshi Matano</td></tr>
+            <tr><td>NAM <span class="abbr">(Non-Aligned)</span></td><td class="hq-tag">Jakarta, Indonesia</td><td>1961</td><td>-</td></tr>
             <tr><td>NATO</td><td class="hq-tag">Brussels, Belgium</td><td>1949</td><td>Mark Rutte</td></tr>
+            <tr><td>OECD</td><td class="hq-tag">Paris, France</td><td>1961</td><td>Mathias Cormann</td></tr>
         </tbody>
     </table>
 
     <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Terminal</a>
 
     <footer>
-        <p>© 2024 | Built for Students</p>
+        <p>© 2026 | Built for Students | By Arnav Batra</p>
     </footer>
 
     <script>
