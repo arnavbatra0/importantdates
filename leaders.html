@@ -84,6 +84,42 @@
             display: inline-block;
         }
         .back-home:hover { color: var(--accent-yellow); }
+        /* Mobile Responsive Adjustments */
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .leader-table {
+        display: block;
+        overflow-x: auto; /* Allows horizontal scrolling if the table is too wide */
+    }
+
+    /* Option 1: Hide less important columns on very small screens */
+    .system-col, .fact-col {
+        display: none; 
+    }
+
+    /* Option 2: Adjust column widths for mobile */
+    .country-name {
+        width: 40%;
+        font-size: 0.8rem;
+    }
+
+    .leader-name {
+        font-size: 0.9rem;
+    }
+
+    .leader-table th, .leader-table td {
+        padding: 8px 10px;
+    }
+
+    .imp-tag {
+        display: block; /* Puts the "Important" tag on a new line to save horizontal space */
+        width: fit-content;
+        margin: 4px 0 0 0;
+    }
+}
     </style>
 </head>
 <body>
@@ -690,6 +726,90 @@
                 <td><span class="leader-name">Abdel Fattah al-Burhan</span><br><small class="leader-type">Sovereignty Council Chairman</small></td>
                 <td class="system-col">Republic / Parliamentary</td>
                 <td class="fact-col">Military leader during transitional period</td>
+            </tr>
+            <tr>
+                <td class="country-name">UAE</td>
+                <td><span class="leader-name">Mohamed bin Zayed Al Nahyan</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Federal Elective Monarchy</td>
+                <td class="fact-col">Expanded UAE strategic diplomacy [cite: 5]</td>
+            </tr>
+            <tr>
+                <td class="country-name">Qatar</td>
+                <td><span class="leader-name">Tamim bin Hamad Al Thani</span><br><small class="leader-type">Emir</small></td>
+                <td class="system-col">Semi-constitutional Monarchy</td>
+                <td class="fact-col">Took power in a rare voluntary abdication [cite: 5]</td>
+            </tr>
+            <tr>
+                <td class="country-name">Kuwait</td>
+                <td><span class="leader-name">Mishal Al-Ahmad Al-Jaber Al-Sabah</span><br><small class="leader-type">Emir</small></td>
+                <td class="system-col">Constitutional Monarchy</td>
+                <td class="fact-col">Senior royal family statesman [cite: 5]</td>
+            </tr>
+            <tr>
+                <td class="country-name">Oman</td>
+                <td><span class="leader-name">Haitham bin Tariq</span><br><small class="leader-type">Sultan</small></td>
+                <td class="system-col">Absolute Monarchy</td>
+                <td class="fact-col">Succeeded longtime ruler Qaboos [cite: 5]</td>
+            </tr>
+            <tr>
+                <td class="country-name">Tanzania</td>
+                <td><span class="leader-name">Samia Suluhu Hassan</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Dominant-party Presidential Republic</td>
+                <td class="fact-col">First female president of Tanzania [cite: 3, 4]</td>
+            </tr>
+            <tr>
+                <td class="country-name">DR Congo</td>
+                <td><span class="leader-name">Félix Tshisekedi</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Semi-presidential Republic</td>
+                <td class="fact-col">First peaceful transfer-era president [cite: 3]</td>
+            </tr>
+            <tr>
+                <td class="country-name">Finland</td>
+                <td><span class="leader-name">Alexander Stubb</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Parliamentary Republic</td>
+                <td class="fact-col">Former PM who returned as president [cite: 4]</td>
+            </tr>
+            <tr>
+                <td class="country-name">Finland</td>
+                <td><span class="leader-name">Petteri Orpo</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Parliamentary Republic</td>
+                <td class="fact-col">Center-right coalition leader [cite: 4]</td>
+            </tr>
+            <tr>
+                <td class="country-name">Ireland</td>
+                <td><span class="leader-name">Micheál Martin</span><br><small class="leader-type">Taoiseach (PM)</small></td>
+                <td class="system-col">Parliamentary Republic</td>
+                <td class="fact-col">Major coalition-era statesman [cite: 5]</td>
+            </tr>
+            <tr>
+                <td class="country-name">Ireland</td>
+                <td><span class="leader-name">Catherine Connolly</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Parliamentary Republic</td>
+                <td class="fact-col">Known for parliamentary reform [cite: 5]</td>
+            </tr>
+            <tr>
+                <td class="country-name">Austria</td>
+                <td><span class="leader-name">Christian Stocker</span><br><small class="leader-type">Chancellor</small></td>
+                <td class="system-col">Federal Parliamentary Republic</td>
+                <td class="fact-col">Took office after coalition shifts [cite: 4]</td>
+            </tr>
+            <tr>
+                <td class="country-name">Switzerland</td>
+                <td><span class="leader-name">Guy Parmelin</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Federal Direct-democratic Republic</td>
+                <td class="fact-col">Rotating federal presidency role [cite: 4]</td>
+            </tr>
+            <tr>
+                <td class="country-name">Vietnam</td>
+                <td><span class="leader-name">Lương Cường</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">One-party Socialist Republic</td>
+                <td class="fact-col">Senior military-political figure [cite: 3]</td>
+            </tr>
+            <tr>
+                <td class="country-name">Saudi Arabia</td>
+                <td><span class="leader-name">Salman bin Abdulaziz Al Saud</span><br><small class="leader-type">King</small></td>
+                <td class="system-col">Absolute Monarchy</td>
+                <td class="fact-col">One of the Sudairi Seven [cite: 2, 3]</td>
             </tr>
         </tbody>
     </table>
