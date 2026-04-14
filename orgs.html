@@ -67,7 +67,8 @@
         .abbr {
             color: #888;
             font-size: 0.8rem;
-            margin-left: 5px;
+            display: block; /* Makes it look cleaner on mobile */
+            margin-top: 2px;
         }
 
         .imp-tag {
@@ -90,6 +91,41 @@
         }
 
         .back-home:hover { color: var(--accent-yellow); }
+
+        /* --- MOBILE RESPONSIVE FIX --- */
+        @media screen and (max-width: 600px) {
+            .org-table thead {
+                display: none; /* Hide headers on mobile */
+            }
+            
+            .org-table, .org-table tbody, .org-table tr, .org-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .org-table tr {
+                margin-bottom: 15px;
+                border: 1px solid #333;
+                border-radius: 8px;
+                padding: 10px;
+            }
+
+            .org-table td {
+                border: none;
+                padding: 5px 10px;
+                font-size: 0.85rem;
+            }
+
+            /* Add labels before the data so user knows what is what */
+            .org-table td:nth-of-type(1) { 
+                font-size: 1.1rem; 
+                border-bottom: 1px solid #222;
+                margin-bottom: 5px;
+            }
+            .org-table td:nth-of-type(2):before { content: "HQ: "; color: #888; }
+            .org-table td:nth-of-type(3):before { content: "Est: "; color: #888; }
+            .org-table td:nth-of-type(4):before { content: "Head: "; color: #888; }
+        }
     </style>
 </head>
 <body>
