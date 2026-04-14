@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Organizations & HQs | Arnav Batra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .search-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        #orgSearch {
+            width: 100%;
+            padding: 15px 20px;
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: var(--text-main);
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        #orgSearch:focus {
+            border-color: var(--accent-yellow);
+            box-shadow: 0 0 10px rgba(255, 191, 0, 0.2);
+        }
+
+        .org-table {
+            width: 100%;
+            max-width: 900px;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+
+        .org-table th, .org-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        .org-table th {
+            background-color: #1a1a1a;
+            color: var(--accent-yellow);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            position: sticky;
+            top: 0;
+        }
+
+        .hq-tag {
+            color: var(--accent-yellow);
+            font-weight: bold;
+        }
+
+        .abbr {
+            color: #888;
+            font-size: 0.8rem;
+            margin-left: 5px;
+        }
+
+        .back-home {
+            margin: 20px 0 40px;
+            text-decoration: none;
+            color: var(--text-dim);
+            display: inline-block;
+        }
+
+        .back-home:hover { color: var(--accent-yellow); }
+    </style>
+</head>
+<body>
+
+    <div class="top-credit">By Arnav Batra</div>
+
+    <div class="sticky-note">
+        <p>We don't charge you anything, not earning from this.</p>
+    </div>
+
+    <header>
+        <h1>WORLD ORGANIZATIONS</h1>
+        <p>Headquarters, Establishment Years & Current Heads</p>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="orgSearch" onkeyup="searchTable()" placeholder="Search by organization or city (e.g. 'WHO' or 'Geneva')...">
+    </div>
+
+    <table class="org-table" id="orgTable">
+        <thead>
+            <tr>
+                <th>Organization</th>
+                <th>Headquarters</th>
+                <th>Year</th>
+                <th>Current Head</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>UNDP <span class="abbr">(UN Dev. Programme)</span></td><td class="hq-tag">New York, USA</td><td>1965</td><td>Alexander De Croo</td></tr>
+            <tr><td>UNEP <span class="abbr">(UN Environment)</span></td><td class="hq-tag">Nairobi, Kenya</td><td>1972</td><td>Inger Anderson</td></tr>
+            <tr><td>UNFPA <span class="abbr">(Population Fund)</span></td><td class="hq-tag">New York, USA</td><td>1969</td><td>Diene Keita</td></tr>
+            <tr><td>UN-Habitat</td><td class="hq-tag">Nairobi, Kenya</td><td>1978</td><td>Anaclaudia Rossbach</td></tr>
+            <tr><td>UNICEF</td><td class="hq-tag">New York, USA</td><td>1946</td><td>Catherine M. Russell</td></tr>
+            <tr><td>WFP <span class="abbr">(World Food)</span></td><td class="hq-tag">Rome, Italy</td><td>1961</td><td>Cindy McCain</td></tr>
+            <tr><td>FAO <span class="abbr">(Food & Agriculture)</span></td><td class="hq-tag">Rome, Italy</td><td>1945</td><td>Qu Dongyu</td></tr>
+            <tr><td>BIMSTEC</td><td class="hq-tag">Dhaka, Bangladesh</td><td>1997</td><td>Indra Mani Pandey</td></tr>
+            <tr><td>SCO <span class="abbr">(Shanghai Co-op)</span></td><td class="hq-tag">Beijing, China</td><td>2001</td><td>Nurlan Yermeknbayev</td></tr>
+
+            <tr><td>ICAO <span class="abbr">(Civil Aviation)</span></td><td class="hq-tag">Montreal, Canada</td><td>1947</td><td>Juan Carlos Salazar Gomez</td></tr>
+            <tr><td>IFAD <span class="abbr">(Agri Dev)</span></td><td class="hq-tag">Rome, Italy</td><td>1977</td><td>Alvaro Lario</td></tr>
+            <tr><td>ILO <span class="abbr">(Labour)</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1919</td><td>Gilbert Houngbo</td></tr>
+            <tr><td>IMF <span class="abbr">(Monetary Fund)</span></td><td class="hq-tag">Washington DC, USA</td><td>1945</td><td>Kristalina Georgieva</td></tr>
+            <tr><td>IMO <span class="abbr">(Maritime)</span></td><td class="hq-tag">London, UK</td><td>1948</td><td>Arsenio Dominguez</td></tr>
+            <tr><td>ITU <span class="abbr">(Telecom)</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1865</td><td>Doreen Bogdan-Martin</td></tr>
+            <tr><td>UNESCO</td><td class="hq-tag">Paris, France</td><td>1945</td><td>Khaled El Enany</td></tr>
+            <tr><td>UNIDO <span class="abbr">(Industrial Dev)</span></td><td class="hq-tag">Vienna, Austria</td><td>1966</td><td>Gerd Muller</td></tr>
+            <tr><td>UNWTO <span class="abbr">(Tourism)</span></td><td class="hq-tag">Madrid, Spain</td><td>1975</td><td>Shaikha Al Nowais</td></tr>
+            <tr><td>WHO <span class="abbr">(Health)</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1948</td><td>Tedros Adhanom</td></tr>
+
+            <tr><td>WIPO <span class="abbr">(Intellectual Prop)</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1967</td><td>Daren Tang</td></tr>
+            <tr><td>World Bank</td><td class="hq-tag">Washington DC, USA</td><td>1944</td><td>Ajay Pal Singh Banga</td></tr>
+            <tr><td>ISA <span class="abbr">(Solar Alliance)</span></td><td class="hq-tag">Gurugram, India</td><td>2015</td><td>Ashish Khanna</td></tr>
+            <tr><td>IAEA <span class="abbr">(Atomic Energy)</span></td><td class="hq-tag">Vienna, Austria</td><td>1957</td><td>Rafael Grossi</td></tr>
+            <tr><td>WTO <span class="abbr">(World Trade)</span></td><td class="hq-tag">Geneva, Switzerland</td><td>1995</td><td>Ngozi Okonjo-Iweala</td></tr>
+            <tr><td>Amnesty International</td><td class="hq-tag">London, UK</td><td>1961</td><td>Agnès Callamard</td></tr>
+
+            <tr><td>ADB <span class="abbr">(Asian Dev Bank)</span></td><td class="hq-tag">Manila, Philippines</td><td>1966</td><td>Masato Kanda</td></tr>
+            <tr><td>ASEAN</td><td class="hq-tag">Jakarta, Indonesia</td><td>1967</td><td>Kao Kim Hourn</td></tr>
+            <tr><td>European Union (EU)</td><td class="hq-tag">Brussels, Belgium</td><td>1993</td><td>Ursula Von Der Leyen</td></tr>
+            <tr><td>Interpol</td><td class="hq-tag">Lyon, France</td><td>1923</td><td>Lucas Phillipe</td></tr>
+            <tr><td>ICJ <span class="abbr">(Court of Justice)</span></td><td class="hq-tag">The Hague, Netherlands</td><td>1945</td><td>Yuji Iwasawa</td></tr>
+            <tr><td>ICC <span class="abbr">(Cricket Council)</span></td><td class="hq-tag">Dubai, UAE</td><td>1909</td><td>Jay Shah (Chair)</td></tr>
+
+            <tr><td>OPEC</td><td class="hq-tag">Vienna, Austria</td><td>1960</td><td>Haitham Al-Ghais</td></tr>
+            <tr><td>SAARC</td><td class="hq-tag">Kathmandu, Nepal</td><td>1985</td><td>Golam Sarwar</td></tr>
+            <tr><td>WWF <span class="abbr">(Nature)</span></td><td class="hq-tag">Gland, Switzerland</td><td>1961</td><td>Adil Najam</td></tr>
+            <tr><td>NATO</td><td class="hq-tag">Brussels, Belgium</td><td>1949</td><td>Mark Rutte</td></tr>
+        </tbody>
+    </table>
+
+    <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Terminal</a>
+
+    <footer>
+        <p>© 2024 | Built for Students</p>
+    </footer>
+
+    <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, j, txtValue;
+            input = document.getElementById("orgSearch");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("orgTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 1; i < tr.length; i++) {
+                tr[i].style.display = "none";
+                td = tr[i].getElementsByTagName("td");
+                for (j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
