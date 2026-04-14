@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitals & Currencies | Arnav Batra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .search-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        #capSearch {
+            width: 100%;
+            padding: 15px 20px;
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: var(--text-main);
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        #capSearch:focus {
+            border-color: var(--accent-yellow);
+            box-shadow: 0 0 10px rgba(255, 191, 0, 0.2);
+        }
+
+        .cap-table {
+            width: 100%;
+            max-width: 1000px;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+
+        .cap-table th, .cap-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        .cap-table th {
+            background-color: #1a1a1a;
+            color: var(--accent-yellow);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .country-col { font-weight: bold; color: var(--text-main); width: 25%; }
+        .capital-col { color: var(--accent-yellow); width: 35%; }
+        .currency-col { color: #fff; width: 25%; }
+        .continent-tag { font-size: 0.7rem; color: #777; text-transform: uppercase; }
+
+        .imp-tag {
+            background: var(--accent-yellow);
+            color: #000;
+            font-size: 0.6rem;
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-left: 8px;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+
+        .back-home {
+            margin: 20px 0 40px;
+            text-decoration: none;
+            color: var(--text-dim);
+            display: inline-block;
+        }
+        .back-home:hover { color: var(--accent-yellow); }
+    </style>
+</head>
+<body>
+
+    <div class="top-credit">By Arnav Batra</div>
+
+    <header>
+        <h1>WORLD CAPITALS & CURRENCIES</h1>
+        <p>Global Directory Organized for Competitive Exams</p>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="capSearch" onkeyup="searchTable()" placeholder="Search country, capital, or currency...">
+    </div>
+
+    <table class="cap-table" id="capTable">
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Capital</th>
+                <th>Currency</th>
+                <th>Continent</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td class="country-col">Afghanistan<span class="imp-tag">IMP</span></td><td class="capital-col">Kabul</td><td class="currency-col">Afghani</td><td class="continent-tag">Asia</td></tr>
+            <tr><td class="country-col">Bangladesh<span class="imp-tag">IMP</span></td><td class="capital-col">Dhaka</td><td class="currency-col">Taka</td><td class="continent-tag">Asia</td></tr>
+            <tr><td class="country-col">Bhutan<span class="imp-tag">IMP</span></td><td class="capital-col">Thimphu</td><td class="currency-col">Ngultrum</td><td class="continent-tag">Asia</td></tr>
+            <tr><td class="country-col">China<span class="imp-tag">IMP</span></td><td class="capital-col">Beijing</td><td class="currency-col">Renminbi (Yuan)</td><td class="continent-tag">Asia</td></tr>
+            <tr><td class="country-col">India<span class="imp-tag">IMP</span></td><td class="capital-col">New Delhi</td><td class="currency-col">Indian Rupee</td><td class="continent-tag">Asia</td></tr>
+            <tr><td class="country-col">Indonesia</td><td class="capital-col">Jakarta</td><td class="currency-col">Rupiah</td><td class="continent-tag">Asia</td></tr>
+            <tr><td class="country-col">Israel<span class="imp-tag">IMP</span></td><td class="capital-col">Jerusalem</td><td class="currency-col">Shekel</td><td class="continent-tag">Asia</td></tr>
+            <tr><td class="country-col">Japan<span class="imp-tag">IMP</span></td><td class="capital-col">Tokyo</td><td class="currency-col">Yen</td><td class="continent-tag">Asia</td></tr>
+            <tr><td class="country-col">Myanmar<span class="imp-tag">IMP</span></td><td class="capital-col">Naypyidaw</td><td class="currency-col">Kyat</td><td class="continent-tag">Asia</td></tr>
+            <tr><td class="country-col">Nepal<span class="imp-tag">IMP</span></td><td class="capital-col">Kathmandu</td><td class="currency-col">Nepalese Rupee</td><td class="continent-tag">Asia</td></tr>
+            <tr><td class="country-col">Pakistan<span class="imp-tag">IMP</span></td><td class="capital-col">Islamabad</td><td class="currency-col">Pakistani Rupee</td><td class="continent-tag">Asia</td></tr>
+            <tr><td class="country-col">Russia<span class="imp-tag">IMP</span></td><td class="capital-col">Moscow</td><td class="currency-col">Ruble</td><td class="continent-tag">Asia/EU</td></tr>
+            <tr><td class="country-col">South Korea<span class="imp-tag">IMP</span></td><td class="capital-col">Seoul</td><td class="currency-col">Won</td><td class="continent-tag">Asia</td></tr>
+            <tr><td class="country-col">Sri Lanka<span class="imp-tag">IMP</span></td><td class="capital-col">Sri Jayawardenepura Kotte (Leg) / Colombo (Exec)</td><td class="currency-col">Sri Lankan Rupee</td><td class="continent-tag">Asia</td></tr>
+            <tr><td class="country-col">Thailand</td><td class="capital-col">Bangkok</td><td class="currency-col">Baht</td><td class="continent-tag">Asia</td></tr>
+            <tr><td class="country-col">UAE<span class="imp-tag">IMP</span></td><td class="capital-col">Abu Dhabi</td><td class="currency-col">Dirham</td><td class="continent-tag">Asia</td></tr>
+            <tr><td class="country-col">Vietnam</td><td class="capital-col">Hanoi</td><td class="currency-col">Dong</td><td class="continent-tag">Asia</td></tr>
+
+            <tr><td class="country-col">France<span class="imp-tag">IMP</span></td><td class="capital-col">Paris</td><td class="currency-col">Euro</td><td class="continent-tag">Europe</td></tr>
+            <tr><td class="country-col">Germany<span class="imp-tag">IMP</span></td><td class="capital-col">Berlin</td><td class="currency-col">Euro</td><td class="continent-tag">Europe</td></tr>
+            <tr><td class="country-col">Italy</td><td class="capital-col">Rome</td><td class="currency-col">Euro</td><td class="continent-tag">Europe</td></tr>
+            <tr><td class="country-col">Spain</td><td class="capital-col">Madrid</td><td class="currency-col">Euro</td><td class="continent-tag">Europe</td></tr>
+            <tr><td class="country-col">Switzerland</td><td class="capital-col">Bern</td><td class="currency-col">Swiss Franc</td><td class="continent-tag">Europe</td></tr>
+            <tr><td class="country-col">United Kingdom<span class="imp-tag">IMP</span></td><td class="capital-col">London</td><td class="currency-col">Pound Sterling</td><td class="continent-tag">Europe</td></tr>
+            <tr><td class="country-col">Ukraine<span class="imp-tag">IMP</span></td><td class="capital-col">Kyiv</td><td class="currency-col">Hryvnia</td><td class="continent-tag">Europe</td></tr>
+
+            <tr><td class="country-col">Canada<span class="imp-tag">IMP</span></td><td class="capital-col">Ottawa</td><td class="currency-col">Canadian Dollar</td><td class="continent-tag">N. America</td></tr>
+            <tr><td class="country-col">Mexico</td><td class="capital-col">Mexico City</td><td class="currency-col">Mexican Peso</td><td class="continent-tag">N. America</td></tr>
+            <tr><td class="country-col">USA<span class="imp-tag">IMP</span></td><td class="capital-col">Washington D.C.</td><td class="currency-col">US Dollar</td><td class="continent-tag">N. America</td></tr>
+
+            <tr><td class="country-col">Argentina</td><td class="capital-col">Buenos Aires</td><td class="currency-col">Argentine Peso</td><td class="continent-tag">S. America</td></tr>
+            <tr><td class="country-col">Brazil<span class="imp-tag">IMP</span></td><td class="capital-col">Brasilia</td><td class="currency-col">Real</td><td class="continent-tag">S. America</td></tr>
+
+            <tr><td class="country-col">Egypt</td><td class="capital-col">Cairo</td><td class="currency-col">Egyptian Pound</td><td class="continent-tag">Africa</td></tr>
+            <tr><td class="country-col">Kenya</td><td class="capital-col">Nairobi</td><td class="currency-col">Kenyan Shilling</td><td class="continent-tag">Africa</td></tr>
+            <tr><td class="country-col">Nigeria</td><td class="capital-col">Abuja</td><td class="currency-col">Naira</td><td class="continent-tag">Africa</td></tr>
+            <tr><td class="country-col">South Africa<span class="imp-tag">IMP</span></td><td class="capital-col">Pretoria (Admin) / Cape Town (Leg)</td><td class="currency-col">Rand</td><td class="continent-tag">Africa</td></tr>
+
+            <tr><td class="country-col">Australia<span class="imp-tag">IMP</span></td><td class="capital-col">Canberra</td><td class="currency-col">Australian Dollar</td><td class="continent-tag">Oceania</td></tr>
+            <tr><td class="country-col">New Zealand</td><td class="capital-col">Wellington</td><td class="currency-col">NZ Dollar</td><td class="continent-tag">Oceania</td></tr>
+        </tbody>
+    </table>
+
+    <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Terminal</a>
+
+    <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, j, txtValue;
+            input = document.getElementById("capSearch");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("capTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 1; i < tr.length; i++) {
+                tr[i].style.display = "none";
+                td = tr[i].getElementsByTagName("td");
+                for (j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
