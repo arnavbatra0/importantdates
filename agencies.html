@@ -7,7 +7,7 @@
     <title>Intelligence Agencies | Arnav Batra</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
+  <style>
         .search-container {
             width: 100%;
             max-width: 900px;
@@ -62,7 +62,6 @@
         .country-name {
             font-weight: bold;
             color: var(--text-main);
-            width: 20%;
         }
 
         .agency-name {
@@ -97,6 +96,57 @@
         }
 
         .back-home:hover { color: var(--accent-yellow); }
+
+        /* --- MOBILE RESPONSIVE FIX --- */
+        @media screen and (max-width: 650px) {
+            .agency-table thead {
+                display: none; /* Hide standard headers */
+            }
+
+            .agency-table, .agency-table tbody, .agency-table tr, .agency-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .agency-table tr {
+                margin-bottom: 20px;
+                border: 1px solid #333;
+                border-radius: 8px;
+                padding: 12px;
+                background: #111;
+            }
+
+            .agency-table td {
+                border: none;
+                padding: 6px 0;
+                font-size: 0.9rem;
+            }
+
+            /* Country Heading Style */
+            .agency-table td:nth-of-type(1) {
+                border-bottom: 1px solid #222;
+                margin-bottom: 8px;
+                font-size: 1.1rem;
+                padding-bottom: 8px;
+            }
+
+            /* Adding labels for the other data */
+            .agency-table td:nth-of-type(2):before {
+                content: "Agency: ";
+                color: #555;
+                font-size: 0.75rem;
+                text-transform: uppercase;
+            }
+
+            .agency-table td:nth-of-type(3):before {
+                content: "Focus: ";
+                color: #555;
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                display: block; /* Puts label on its own line for the long description */
+                margin-bottom: 2px;
+            }
+        }
     </style>
 </head>
 <body>
