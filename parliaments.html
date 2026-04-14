@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parliaments of Countries | Arnav Batra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .search-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        #parlSearch {
+            width: 100%;
+            padding: 15px 20px;
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: var(--text-main);
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        #parlSearch:focus {
+            border-color: var(--accent-yellow);
+            box-shadow: 0 0 10px rgba(255, 191, 0, 0.2);
+        }
+
+        .parl-table {
+            width: 100%;
+            max-width: 900px;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+
+        .parl-table th, .parl-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+            font-size: 0.95rem;
+        }
+
+        .parl-table th {
+            background-color: #1a1a1a;
+            color: var(--accent-yellow);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            position: sticky;
+            top: 0;
+        }
+
+        .country-name {
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        .parliament-name {
+            color: var(--accent-yellow);
+        }
+
+        .imp-tag {
+            background: var(--accent-yellow);
+            color: #000;
+            font-size: 0.6rem;
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-left: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            vertical-align: middle;
+        }
+
+        .back-home {
+            margin: 20px 0 40px;
+            text-decoration: none;
+            color: var(--text-dim);
+            display: inline-block;
+        }
+
+        .back-home:hover { color: var(--accent-yellow); }
+    </style>
+</head>
+<body>
+
+    <div class="top-credit">By Arnav Batra</div>
+
+    <div class="sticky-note">
+        <p>We don't charge you anything, not earning from this.</p>
+    </div>
+
+    <header>
+        <h1>GLOBAL PARLIAMENTS</h1>
+        <p>Legislative Bodies of Different Countries</p>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="parlSearch" onkeyup="searchTable()" placeholder="Search for a country or parliament name...">
+    </div>
+
+    <table class="parl-table" id="parlTable">
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Name of Parliament</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td class="country-name">Afghanistan<span class="imp-tag">Important</span></td><td class="parliament-name">Shora</td></tr>
+            <tr><td class="country-name">Albania</td><td class="parliament-name">People's Assembly</td></tr>
+            <tr><td class="country-name">Algeria</td><td class="parliament-name">National People's Assembly</td></tr>
+            <tr><td class="country-name">Andorra</td><td class="parliament-name">General Council</td></tr>
+            <tr><td class="country-name">Angola</td><td class="parliament-name">National People's Assembly</td></tr>
+            <tr><td class="country-name">Argentina</td><td class="parliament-name">National Congress</td></tr>
+            <tr><td class="country-name">Australia</td><td class="parliament-name">Federal Parliament</td></tr>
+            <tr><td class="country-name">Austria</td><td class="parliament-name">National Assembly</td></tr>
+            <tr><td class="country-name">Azerbaijan</td><td class="parliament-name">Melli Majlis</td></tr>
+            <tr><td class="country-name">Bahamas</td><td class="parliament-name">General Assembly</td></tr>
+            <tr><td class="country-name">Bahrain</td><td class="parliament-name">Consultative Council</td></tr>
+            <tr><td class="country-name">Bangladesh<span class="imp-tag">Important</span></td><td class="parliament-name">Jatia Parliament (Jatia Sangsad)</td></tr>
+            <tr><td class="country-name">Belize</td><td class="parliament-name">National Assembly</td></tr>
+            <tr><td class="country-name">Bhutan<span class="imp-tag">Important</span></td><td class="parliament-name">Tsogdu</td></tr>
+            <tr><td class="country-name">Bolivia</td><td class="parliament-name">National Congress</td></tr>
+            <tr><td class="country-name">Botswana</td><td class="parliament-name">National Assembly</td></tr>
+            <tr><td class="country-name">Brazil</td><td class="parliament-name">National Congress</td></tr>
+            <tr><td class="country-name">Britain (UK)<span class="imp-tag">Important</span></td><td class="parliament-name">Parliament (House of Commons & House of Lords)</td></tr>
+            <tr><td class="country-name">Brunei</td><td class="parliament-name">National Assembly</td></tr>
+            <tr><td class="country-name">Bulgaria</td><td class="parliament-name">Narodno Sabranie</td></tr>
+            <tr><td class="country-name">Cambodia</td><td class="parliament-name">National Assembly</td></tr>
+            <tr><td class="country-name">Canada</td><td class="parliament-name">Parliament</td></tr>
+            <tr><td class="country-name">China<span class="imp-tag">Important</span></td><td class="parliament-name">National People's Assembly</td></tr>
+            <tr><td class="country-name">Colombia</td><td class="parliament-name">Congress</td></tr>
+            <tr><td class="country-name">Comoros</td><td class="parliament-name">Legislative Council And Senate</td></tr>
+            <tr><td class="country-name">Congo (Democratic Rep.)</td><td class="parliament-name">National Legislative Council</td></tr>
+            <tr><td class="country-name">Costa Rica</td><td class="parliament-name">Legislative Council And Senate</td></tr>
+            <tr><td class="country-name">Croatia</td><td class="parliament-name">Sabor</td></tr>
+            <tr><td class="country-name">Cuba</td><td class="parliament-name">National Assembly Of People's Power</td></tr>
+            <tr><td class="country-name">Denmark<span class="imp-tag">Important</span></td><td class="parliament-name">Folketing</td></tr>
+            <tr><td class="country-name">East Timor</td><td class="parliament-name">Constituent Assembly</td></tr>
+            <tr><td class="country-name">Ecuador</td><td class="parliament-name">National Congress</td></tr>
+            <tr><td class="country-name">Egypt</td><td class="parliament-name">People's Assembly</td></tr>
+            <tr><td class="country-name">El Salvador</td><td class="parliament-name">Legislative Assembly</td></tr>
+            <tr><td class="country-name">Ethiopia</td><td class="parliament-name">Federal Council And House Of Representative</td></tr>
+            <tr><td class="country-name">Fiji Islands</td><td class="parliament-name">Senate & House Of Representative</td></tr>
+            <tr><td class="country-name">Finland</td><td class="parliament-name">Eduskunta (Parliament)</td></tr>
+            <tr><td class="country-name">France</td><td class="parliament-name">National Assembly</td></tr>
+            <tr><td class="country-name">Germany<span class="imp-tag">Important</span></td><td class="parliament-name">Bundestag (Lower) & Bundesrat (Upper)</td></tr>
+            <tr><td class="country-name">Greece</td><td class="parliament-name">Chamber Of Deputies</td></tr>
+            <tr><td class="country-name">Guyana</td><td class="parliament-name">National Assembly</td></tr>
+            <tr><td class="country-name">Hungary</td><td class="parliament-name">National Assembly</td></tr>
+            <tr><td class="country-name">Iceland</td><td class="parliament-name">Althing</td></tr>
+            <tr><td class="country-name">India<span class="imp-tag">Important</span></td><td class="parliament-name">Sansad (Rajya Sabha & Lok Sabha)</td></tr>
+            <tr><td class="country-name">Indonesia</td><td class="parliament-name">People's Consultative Assembly</td></tr>
+            <tr><td class="country-name">Iran<span class="imp-tag">Important</span></td><td class="parliament-name">Majlis</td></tr>
+            <tr><td class="country-name">Iraq</td><td class="parliament-name">National Assembly</td></tr>
+            <tr><td class="country-name">Ireland</td><td class="parliament-name">Oireachtas</td></tr>
+            <tr><td class="country-name">Israel<span class="imp-tag">Important</span></td><td class="parliament-name">The Knesset</td></tr>
+            <tr><td class="country-name">Italy</td><td class="parliament-name">Chamber Of Deputies And Senate</td></tr>
+            <tr><td class="country-name">Japan<span class="imp-tag">Important</span></td><td class="parliament-name">Diet</td></tr>
+            <tr><td class="country-name">Jordan</td><td class="parliament-name">National Assembly</td></tr>
+            <tr><td class="country-name">Korea (North)</td><td class="parliament-name">Supreme People's Assembly</td></tr>
+            <tr><td class="country-name">Korea (South)</td><td class="parliament-name">National Assembly</td></tr>
+            <tr><td class="country-name">Kuwait</td><td class="parliament-name">National Assembly</td></tr>
+            <tr><td class="country-name">Lebanon</td><td class="parliament-name">National Assembly</td></tr>
+            <tr><td class="country-name">Laos</td><td class="parliament-name">People's Supreme Assembly</td></tr>
+            <tr><td class="country-name">Latvia</td><td class="parliament-name">Saeima</td></tr>
+            <tr><td class="country-name">Lesotho</td><td class="parliament-name">National Assembly And Senate</td></tr>
+            <tr><td class="country-name">Libya</td><td class="parliament-name">General People's Congress</td></tr>
+            <tr><td class="country-name">Lithuania</td><td class="parliament-name">Seimas</td></tr>
+            <tr><td class="country-name">Luxembourg</td><td class="parliament-name">Chamber Of Deputies</td></tr>
+            <tr><td class="country-name">Madagascar</td><td class="parliament-name">National People's Assembly</td></tr>
+            <tr><td class="country-name">Malaysia</td><td class="parliament-name">Majilis</td></tr>
+            <tr><td class="country-name">Maldives<span class="imp-tag">Important</span></td><td class="parliament-name">Majilis</td></tr>
+            <tr><td class="country-name">Mongolia</td><td class="parliament-name">Great People's Khural</td></tr>
+            <tr><td class="country-name">Montenegro</td><td class="parliament-name">Federal Assembly</td></tr>
+            <tr><td class="country-name">Mozambique</td><td class="parliament-name">People's Assembly</td></tr>
+            <tr><td class="country-name">Myanmar<span class="imp-tag">Important</span></td><td class="parliament-name">Pyithu Hluttaw</td></tr>
+            <tr><td class="country-name">Nepal<span class="imp-tag">Important</span></td><td class="parliament-name">Federal Parliament of Nepal</td></tr>
+            <tr><td class="country-name">Netherlands</td><td class="parliament-name">States-General (Staten-General)</td></tr>
+            <tr><td class="country-name">New Zealand</td><td class="parliament-name">Parliament (House Of Representative)</td></tr>
+            <tr><td class="country-name">Norway</td><td class="parliament-name">Storting</td></tr>
+            <tr><td class="country-name">Oman</td><td class="parliament-name">Monarchy</td></tr>
+            <tr><td class="country-name">Pakistan<span class="imp-tag">Important</span></td><td class="parliament-name">National Assembly & Senate</td></tr>
+            <tr><td class="country-name">Papua New Guinea</td><td class="parliament-name">National Parliament</td></tr>
+            <tr><td class="country-name">Paraguay</td><td class="parliament-name">Senate & Chamber Of Deputies</td></tr>
+            <tr><td class="country-name">Philippines</td><td class="parliament-name">The Congress</td></tr>
+            <tr><td class="country-name">Poland</td><td class="parliament-name">Sejm</td></tr>
+            <tr><td class="country-name">Romania</td><td class="parliament-name">Great National Assembly</td></tr>
+            <tr><td class="country-name">Russia<span class="imp-tag">Important</span></td><td class="parliament-name">Duma & Federal Council</td></tr>
+            <tr><td class="country-name">Saudi Arabia</td><td class="parliament-name">Majlis Al Shura</td></tr>
+            <tr><td class="country-name">South Africa</td><td class="parliament-name">Parliament</td></tr>
+            <tr><td class="country-name">Spain</td><td class="parliament-name">Cortes</td></tr>
+            <tr><td class="country-name">Taiwan</td><td class="parliament-name">Legislative Yuan</td></tr>
+            <tr><td class="country-name">Turkey</td><td class="parliament-name">Grand National Assembly</td></tr>
+            <tr><td class="country-name">Uruguay</td><td class="parliament-name">General Assembly</td></tr>
+            <tr><td class="country-name">USA<span class="imp-tag">Important</span></td><td class="parliament-name">Congress</td></tr>
+            <tr><td class="country-name">Uzbekistan</td><td class="parliament-name">Oliy Majlis</td></tr>
+            <tr><td class="country-name">Vietnam</td><td class="parliament-name">National Assembly</td></tr>
+            <tr><td class="country-name">Zambia</td><td class="parliament-name">National Assembly</td></tr>
+            <tr><td class="country-name">Zimbabwe</td><td class="parliament-name">Parliament</td></tr>
+        </tbody>
+    </table>
+
+    <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Terminal</a>
+
+    <footer>
+        <p>© 2024 | Built for Students</p>
+    </footer>
+
+    <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, j, txtValue;
+            input = document.getElementById("parlSearch");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("parlTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 1; i < tr.length; i++) {
+                tr[i].style.display = "none";
+                td = tr[i].getElementsByTagName("td");
+                for (j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
