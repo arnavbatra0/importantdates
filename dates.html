@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important Dates | Exam Resource Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+            max-width: 900px;
+        }
+
+        .filter-btn {
+            background: transparent;
+            color: var(--accent-yellow);
+            border: 1px solid var(--accent-yellow);
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--accent-yellow);
+            color: #000;
+        }
+
+        .dates-table {
+            width: 100%;
+            max-width: 900px;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .dates-table th, .dates-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+
+        .dates-table th {
+            background-color: #1a1a1a;
+            color: var(--accent-yellow);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .month-tag {
+            font-size: 0.7rem;
+            background: #333;
+            padding: 3px 8px;
+            border-radius: 4px;
+            color: var(--accent-yellow);
+            margin-right: 10px;
+            text-transform: uppercase;
+        }
+
+        .back-home {
+            margin: 30px 0;
+            text-decoration: none;
+            color: var(--text-dim);
+            font-size: 1rem;
+            display: inline-block;
+        }
+
+        .back-home:hover {
+            color: var(--accent-yellow);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-credit">By Arnav Batra</div>
+
+    <div class="sticky-note">
+        <p>We don't charge you anything, not earning from this.</p>
+    </div>
+
+    <header>
+        <h1>IMPORTANT DATES</h1>
+        <p>National & International Days for Competitive Exams</p>
+    </header>
+
+    <div class="filter-container">
+        <button class="filter-btn active" onclick="filterMonth('all')">All</button>
+        <button class="filter-btn" onclick="filterMonth('jan')">Jan</button>
+        <button class="filter-btn" onclick="filterMonth('feb')">Feb</button>
+        <button class="filter-btn" onclick="filterMonth('mar')">Mar</button>
+        <button class="filter-btn" onclick="filterMonth('apr')">Apr</button>
+        <button class="filter-btn" onclick="filterMonth('may')">May</button>
+        <button class="filter-btn" onclick="filterMonth('jun')">Jun</button>
+        <button class="filter-btn" onclick="filterMonth('jul')">Jul</button>
+        <button class="filter-btn" onclick="filterMonth('aug')">Aug</button>
+        <button class="filter-btn" onclick="filterMonth('sep')">Sep</button>
+        <button class="filter-btn" onclick="filterMonth('oct')">Oct</button>
+        <button class="filter-btn" onclick="filterMonth('nov')">Nov</button>
+        <button class="filter-btn" onclick="filterMonth('dec')">Dec</button>
+    </div>
+
+    <table class="dates-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Event / Significance</th>
+            </tr>
+        </thead>
+        <tbody id="dates-body">
+            <tr class="date-row jan"><td>12-Jan</td><td><span class="month-tag">JAN</span> National Youth Day</td></tr>
+            <tr class="date-row jan"><td>24-Jan</td><td><span class="month-tag">JAN</span> National Girl Child Day</td></tr>
+            <tr class="date-row jan"><td>25-Jan</td><td><span class="month-tag">JAN</span> National Tourism Day / National Voters Day</td></tr>
+            <tr class="date-row jan"><td>26-Jan</td><td><span class="month-tag">JAN</span> Republic Day / International Customs Day</td></tr>
+            <tr class="date-row jan"><td>30-Jan</td><td><span class="month-tag">JAN</span> Martyrs' Day / World Leprosy Eradication Day</td></tr>
+
+            <tr class="date-row feb"><td>04-Feb</td><td><span class="month-tag">FEB</span> World Cancer Day</td></tr>
+            <tr class="date-row feb"><td>21-Feb</td><td><span class="month-tag">FEB</span> International Mother Language Day</td></tr>
+            <tr class="date-row feb"><td>28-Feb</td><td><span class="month-tag">FEB</span> National Science Day</td></tr>
+
+            <tr class="date-row mar"><td>2nd Mon</td><td><span class="month-tag">MAR</span> Commonwealth Day</td></tr>
+            <tr class="date-row mar"><td>2nd Thu</td><td><span class="month-tag">MAR</span> World Kidney Day</td></tr>
+            <tr class="date-row mar"><td>03-Mar</td><td><span class="month-tag">MAR</span> National Defence Day</td></tr>
+            <tr class="date-row mar"><td>08-Mar</td><td><span class="month-tag">MAR</span> International Women's Day</td></tr>
+            <tr class="date-row mar"><td>16-Mar</td><td><span class="month-tag">MAR</span> National Vaccination Day</td></tr>
+
+            <tr class="date-row apr"><td>07-Apr</td><td><span class="month-tag">APR</span> World Health Day</td></tr>
+            <tr class="date-row apr"><td>25-Apr</td><td><span class="month-tag">APR</span> World Malaria Day</td></tr>
+
+            <tr class="date-row may"><td>01-May</td><td><span class="month-tag">MAY</span> Workers' Day (International Labour Day)</td></tr>
+            <tr class="date-row may"><td>2nd Sun</td><td><span class="month-tag">MAY</span> Mother's Day</td></tr>
+            <tr class="date-row may"><td>08-May</td><td><span class="month-tag">MAY</span> World Red Cross Day</td></tr>
+            <tr class="date-row may"><td>31-May</td><td><span class="month-tag">MAY</span> World No Tobacco Day</td></tr>
+
+            <tr class="date-row jun"><td>05-Jun</td><td><span class="month-tag">JUN</span> World Environment Day</td></tr>
+            <tr class="date-row jun"><td>12-Jun</td><td><span class="month-tag">JUN</span> World Day against Child Labour</td></tr>
+            <tr class="date-row jun"><td>14-Jun</td><td><span class="month-tag">JUN</span> World Blood Donor Day</td></tr>
+            <tr class="date-row jun"><td>23-Jun</td><td><span class="month-tag">JUN</span> International Olympic Day / UN Public Service Day</td></tr>
+            <tr class="date-row jun"><td>26-Jun</td><td><span class="month-tag">JUN</span> International Day against Drug Abuse</td></tr>
+            <tr class="date-row jun"><td>27-Jun</td><td><span class="month-tag">JUN</span> International Diabetes Day</td></tr>
+
+            <tr class="date-row jul"><td>01-Jul</td><td><span class="month-tag">JUL</span> National Doctors Day</td></tr>
+            <tr class="date-row jul"><td>11-Jul</td><td><span class="month-tag">JUL</span> World Population Day</td></tr>
+
+            <tr class="date-row aug"><td>06-Aug</td><td><span class="month-tag">AUG</span> Hiroshima Day / Organ Donation Day</td></tr>
+            <tr class="date-row aug"><td>09-Aug</td><td><span class="month-tag">AUG</span> Nagasaki Day / Quit India Movement Day</td></tr>
+            <tr class="date-row aug"><td>12-Aug</td><td><span class="month-tag">AUG</span> International Youth Day</td></tr>
+            <tr class="date-row aug"><td>19-Aug</td><td><span class="month-tag">AUG</span> World Humanitarian Day</td></tr>
+            <tr class="date-row aug"><td>23-Aug</td><td><span class="month-tag">AUG</span> National Space Day</td></tr>
+
+            <tr class="date-row sep"><td>05-Sep</td><td><span class="month-tag">SEP</span> Teacher's Day (India)</td></tr>
+            <tr class="date-row sep"><td>08-Sep</td><td><span class="month-tag">SEP</span> International Literacy Day</td></tr>
+            <tr class="date-row sep"><td>14-Sep</td><td><span class="month-tag">SEP</span> Hindi Diwas</td></tr>
+            <tr class="date-row sep"><td>16-Sep</td><td><span class="month-tag">SEP</span> World Ozone Day</td></tr>
+            <tr class="date-row sep"><td>21-Sep</td><td><span class="month-tag">SEP</span> Int. Day of Peace / World Alzheimer's Day</td></tr>
+            <tr class="date-row sep"><td>22-Sep</td><td><span class="month-tag">SEP</span> Rose Day (Cancer Patient Welfare)</td></tr>
+            <tr class="date-row sep"><td>23-Sep</td><td><span class="month-tag">SEP</span> International Day of Sign Languages</td></tr>
+            <tr class="date-row sep"><td>29-Sep</td><td><span class="month-tag">SEP</span> World Heart Day</td></tr>
+
+            <tr class="date-row oct"><td>03-Oct</td><td><span class="month-tag">OCT</span> World Nature Day</td></tr>
+            <tr class="date-row oct"><td>08-Oct</td><td><span class="month-tag">OCT</span> Indian Air Force Day</td></tr>
+            <tr class="date-row oct"><td>2nd Thu</td><td><span class="month-tag">OCT</span> World Sight Day</td></tr>
+            <tr class="date-row oct"><td>16-Oct</td><td><span class="month-tag">OCT</span> World Food Day</td></tr>
+            <tr class="date-row oct"><td>24-Oct</td><td><span class="month-tag">OCT</span> UN Day / World Development Info Day</td></tr>
+
+            <tr class="date-row nov"><td>07-Nov</td><td><span class="month-tag">NOV</span> National Cancer Awareness Day</td></tr>
+            <tr class="date-row nov"><td>26-Nov</td><td><span class="month-tag">NOV</span> Constitution Day</td></tr>
+
+            <tr class="date-row dec"><td>01-Dec</td><td><span class="month-tag">DEC</span> World AIDS Day</td></tr>
+            <tr class="date-row dec"><td>04-Dec</td><td><span class="month-tag">DEC</span> Indian Navy Day</td></tr>
+            <tr class="date-row dec"><td>10-Dec</td><td><span class="month-tag">DEC</span> Human Rights Day</td></tr>
+            <tr class="date-row dec"><td>23-Dec</td><td><span class="month-tag">DEC</span> Kisan Diwas (Farmer's Day)</td></tr>
+        </tbody>
+    </table>
+
+    <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Terminal</a>
+
+    <footer>
+        <p>© 2024 | Built for Students</p>
+    </footer>
+
+    <script>
+        function filterMonth(month) {
+            const rows = document.querySelectorAll('.date-row');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.toLowerCase() === month || (month === 'all' && btn.innerText === 'All')) {
+                    btn.classList.add('active');
+                }
+            });
+
+            rows.forEach(row => {
+                if (month === 'all') {
+                    row.style.display = 'table-row';
+                } else if (row.classList.contains(month)) {
+                    row.style.display = 'table-row';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
