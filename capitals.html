@@ -7,7 +7,7 @@
     <title>Capitals & Currencies | Arnav Batra</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
+   <style>
         .search-container {
             width: 100%;
             max-width: 900px;
@@ -60,9 +60,9 @@
             z-index: 10;
         }
 
-        .country-col { font-weight: bold; color: var(--text-main); width: 25%; }
-        .capital-col { color: var(--accent-yellow); width: 35%; }
-        .currency-col { color: #fff; width: 25%; }
+        .country-col { font-weight: bold; color: var(--text-main); }
+        .capital-col { color: var(--accent-yellow); }
+        .currency-col { color: #fff; }
         .continent-tag { font-size: 0.7rem; color: #777; text-transform: uppercase; }
 
         .imp-tag {
@@ -83,6 +83,53 @@
             display: inline-block;
         }
         .back-home:hover { color: var(--accent-yellow); }
+
+        /* --- MOBILE RESPONSIVE FIX --- */
+        @media screen and (max-width: 600px) {
+            .cap-table thead {
+                display: none; /* Hide top headers */
+            }
+
+            .cap-table, .cap-table tbody, .cap-table tr, .cap-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .cap-table tr {
+                margin-bottom: 15px;
+                border: 1px solid #333;
+                border-radius: 8px;
+                padding: 10px;
+                background: rgba(255, 255, 255, 0.02);
+            }
+
+            .cap-table td {
+                border: none;
+                padding: 4px 8px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            /* Country Name Styling */
+            .cap-table td:nth-of-type(1) {
+                border-bottom: 1px solid #222;
+                margin-bottom: 6px;
+                padding-bottom: 8px;
+                font-size: 1.05rem;
+                display: block; /* Full width for the country name */
+            }
+
+            /* Labels for mobile view */
+            .cap-table td:nth-of-type(2):before { content: "Capital"; color: #555; font-size: 0.7rem; text-transform: uppercase; }
+            .cap-table td:nth-of-type(3):before { content: "Currency"; color: #555; font-size: 0.7rem; text-transform: uppercase; }
+            .cap-table td:nth-of-type(4):before { content: "Region"; color: #555; font-size: 0.7rem; text-transform: uppercase; }
+
+            /* Align text to the right on mobile for labels */
+            .cap-table td:not(:first-child) {
+                text-align: right;
+            }
+        }
     </style>
 </head>
 <body>
