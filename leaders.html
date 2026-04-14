@@ -62,8 +62,8 @@
         .country-name { font-weight: bold; color: var(--text-main); width: 20%; }
         .leader-name { color: var(--accent-yellow); font-weight: bold; font-size: 1rem; }
         .leader-type { color: #888; text-transform: uppercase; font-size: 0.7rem; }
-        .system-col { color: #ccc; font-style: italic; width: 15%; }
-        .fact-col { color: #aaa; font-size: 0.85rem; width: 35%; }
+        .system-col { color: #ccc; font-style: italic; width: 20%; }
+        .fact-col { color: #aaa; font-size: 0.85rem; width: 30%; }
 
         .imp-tag {
             background: var(--accent-yellow);
@@ -89,17 +89,13 @@
 
     <div class="top-credit">By Arnav Batra</div>
 
-    <div class="sticky-note">
-        <p>Data updated as of late 2024. For study purposes only.</p>
-    </div>
-
     <header>
         <h1>CURRENT WORLD LEADERS</h1>
-        <p>Heads of State & Government Around the Globe</p>
+        <p>Global Directory for Competitive Exams (110+ Entries)</p>
     </header>
 
     <div class="search-container">
-        <input type="text" id="leaderSearch" onkeyup="searchTable()" placeholder="Search by country, leader name, or title...">
+        <input type="text" id="leaderSearch" onkeyup="searchTable()" placeholder="Search by country, leader, or system...">
     </div>
 
     <table class="leader-table" id="leaderTable">
@@ -131,16 +127,52 @@
                 <td class="fact-col">Most powerful Chinese leader in decades</td>
             </tr>
             <tr>
+                <td class="country-name">China<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Li Qiang</span><br><small class="leader-type">Premier</small></td>
+                <td class="system-col">One-party Socialist Republic</td>
+                <td class="fact-col">Former Shanghai party chief</td>
+            </tr>
+            <tr>
                 <td class="country-name">United States<span class="imp-tag">Important</span></td>
                 <td><span class="leader-name">Donald Trump</span><br><small class="leader-type">President</small></td>
                 <td class="system-col">Federal Presidential Republic</td>
                 <td class="fact-col">Returned in a non-consecutive second presidency</td>
             </tr>
             <tr>
+                <td class="country-name">Indonesia</td>
+                <td><span class="leader-name">Prabowo Subianto</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Presidential Republic</td>
+                <td class="fact-col">Former general turned elected president</td>
+            </tr>
+            <tr>
                 <td class="country-name">Pakistan<span class="imp-tag">Important</span></td>
                 <td><span class="leader-name">Shehbaz Sharif</span><br><small class="leader-type">Prime Minister</small></td>
-                <td class="system-col">Parliamentary Republic</td>
+                <td class="system-col">Federal Parliamentary Republic</td>
                 <td class="fact-col">Returned to office in a coalition era</td>
+            </tr>
+            <tr>
+                <td class="country-name">Pakistan<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Asif Ali Zardari</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Federal Parliamentary Republic</td>
+                <td class="fact-col">Only Pakistani president to serve non-consecutive terms</td>
+            </tr>
+            <tr>
+                <td class="country-name">Nigeria</td>
+                <td><span class="leader-name">Bola Ahmed Tinubu</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Federal Presidential Republic</td>
+                <td class="fact-col">Former Lagos governor with huge national influence</td>
+            </tr>
+            <tr>
+                <td class="country-name">Brazil</td>
+                <td><span class="leader-name">Lula da Silva</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Federal Presidential Republic</td>
+                <td class="fact-col">One of the few leaders to return after years out</td>
+            </tr>
+            <tr>
+                <td class="country-name">Bangladesh<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Tarique Rahman</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Parliamentary Republic</td>
+                <td class="fact-col">Leads during a major political transition</td>
             </tr>
             <tr>
                 <td class="country-name">Russia<span class="imp-tag">Important</span></td>
@@ -149,16 +181,40 @@
                 <td class="fact-col">Among the longest-serving modern leaders</td>
             </tr>
             <tr>
+                <td class="country-name">Mexico</td>
+                <td><span class="leader-name">Claudia Sheinbaum</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Federal Presidential Republic</td>
+                <td class="fact-col">First woman president of Mexico</td>
+            </tr>
+            <tr>
+                <td class="country-name">Japan<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Sanae Takaichi</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Constitutional Monarchy</td>
+                <td class="fact-col">One of Japan’s most prominent conservative leaders</td>
+            </tr>
+            <tr>
                 <td class="country-name">Japan<span class="imp-tag">Important</span></td>
                 <td><span class="leader-name">Naruhito</span><br><small class="leader-type">Emperor</small></td>
                 <td class="system-col">Constitutional Monarchy</td>
                 <td class="fact-col">First emperor born after World War II</td>
             </tr>
             <tr>
+                <td class="country-name">Germany<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Friedrich Merz</span><br><small class="leader-type">Chancellor</small></td>
+                <td class="system-col">Federal Parliamentary Republic</td>
+                <td class="fact-col">Returned to frontline politics after years away</td>
+            </tr>
+            <tr>
                 <td class="country-name">United Kingdom<span class="imp-tag">Important</span></td>
                 <td><span class="leader-name">Keir Starmer</span><br><small class="leader-type">Prime Minister</small></td>
                 <td class="system-col">Constitutional Monarchy</td>
                 <td class="fact-col">Former human rights lawyer</td>
+            </tr>
+            <tr>
+                <td class="country-name">United Kingdom<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Charles III</span><br><small class="leader-type">King</small></td>
+                <td class="system-col">Constitutional Monarchy</td>
+                <td class="fact-col">Waited over 70 years before becoming king</td>
             </tr>
             <tr>
                 <td class="country-name">France<span class="imp-tag">Important</span></td>
@@ -173,10 +229,58 @@
                 <td class="fact-col">Italy’s first female PM</td>
             </tr>
             <tr>
-                <td class="country-name">Israel<span class="imp-tag">Important</span></td>
-                <td><span class="leader-name">Benjamin Netanyahu</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="country-name">Italy<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Sergio Mattarella</span><br><small class="leader-type">President</small></td>
                 <td class="system-col">Parliamentary Republic</td>
-                <td class="fact-col">Israel's longest-serving Prime Minister</td>
+                <td class="fact-col">Known as a stabilizing constitutional figure</td>
+            </tr>
+            <tr>
+                <td class="country-name">South Korea<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Lee Jae-myung</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Presidential Republic</td>
+                <td class="fact-col">Known for progressive domestic reforms</td>
+            </tr>
+            <tr>
+                <td class="country-name">Turkey</td>
+                <td><span class="leader-name">Recep Tayyip Erdoğan</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Presidential Republic</td>
+                <td class="fact-col">One of Turkey’s longest-ruling leaders</td>
+            </tr>
+            <tr>
+                <td class="country-name">Spain</td>
+                <td><span class="leader-name">Pedro Sánchez</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Constitutional Monarchy</td>
+                <td class="fact-col">Survived multiple difficult coalitions</td>
+            </tr>
+            <tr>
+                <td class="country-name">Spain</td>
+                <td><span class="leader-name">Felipe VI</span><br><small class="leader-type">King</small></td>
+                <td class="system-col">Constitutional Monarchy</td>
+                <td class="fact-col">Modernized the monarchy’s public image</td>
+            </tr>
+            <tr>
+                <td class="country-name">Canada<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Mark Carney</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Constitutional Monarchy</td>
+                <td class="fact-col">Former central banker turned PM</td>
+            </tr>
+            <tr>
+                <td class="country-name">Canada<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Charles III</span><br><small class="leader-type">King</small></td>
+                <td class="system-col">Constitutional Monarchy</td>
+                <td class="fact-col">Separate constitutional crown from the UK</td>
+            </tr>
+            <tr>
+                <td class="country-name">Australia</td>
+                <td><span class="leader-name">Anthony Albanese</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Constitutional Monarchy</td>
+                <td class="fact-col">First PM with an Italian surname</td>
+            </tr>
+            <tr>
+                <td class="country-name">Australia</td>
+                <td><span class="leader-name">Charles III</span><br><small class="leader-type">King</small></td>
+                <td class="system-col">Constitutional Monarchy</td>
+                <td class="fact-col">Monarch in a distinct Australian legal role</td>
             </tr>
             <tr>
                 <td class="country-name">Saudi Arabia</td>
@@ -185,18 +289,408 @@
                 <td class="fact-col">Architect of Vision 2030</td>
             </tr>
             <tr>
+                <td class="country-name">Iran<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Ali Khamenei</span><br><small class="leader-type">Supreme Leader</small></td>
+                <td class="system-col">Theocratic Republic</td>
+                <td class="fact-col">Highest authority in Iran</td>
+            </tr>
+            <tr>
+                <td class="country-name">Iran<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Masoud Pezeshkian</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Theocratic Republic</td>
+                <td class="fact-col">Elected on a reformist platform</td>
+            </tr>
+            <tr>
+                <td class="country-name">South Africa</td>
+                <td><span class="leader-name">Cyril Ramaphosa</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Parliamentary Republic</td>
+                <td class="fact-col">Leads South Africa’s first major coalition</td>
+            </tr>
+            <tr>
                 <td class="country-name">Ukraine<span class="imp-tag">Important</span></td>
                 <td><span class="leader-name">Volodymyr Zelenskyy</span><br><small class="leader-type">President</small></td>
                 <td class="system-col">Semi-presidential Republic</td>
-                <td class="fact-col">Former actor and comedian leading during wartime</td>
+                <td class="fact-col">Former actor leading during wartime</td>
+            </tr>
+            <tr>
+                <td class="country-name">Israel<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Benjamin Netanyahu</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Parliamentary Republic</td>
+                <td class="fact-col">Israel's longest-serving Prime Minister</td>
+            </tr>
+            <tr>
+                <td class="country-name">Egypt</td>
+                <td><span class="leader-name">Abdel Fattah el-Sisi</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Presidential Republic</td>
+                <td class="fact-col">Former military chief turned leader</td>
             </tr>
             <tr>
                 <td class="country-name">North Korea</td>
                 <td><span class="leader-name">Kim Jong Un</span><br><small class="leader-type">Supreme Leader</small></td>
                 <td class="system-col">One-party Socialist Republic</td>
-                <td class="fact-col">Successor to the Kim dynasty</td>
+                <td class="fact-col">Third-generation leader of the Kim dynasty</td>
             </tr>
-            </tbody>
+            <tr>
+                <td class="country-name">Vietnam</td>
+                <td><span class="leader-name">To Lam</span><br><small class="leader-type">General Secretary</small></td>
+                <td class="system-col">One-party Socialist Republic</td>
+                <td class="fact-col">Former security chief turned top leader</td>
+            </tr>
+            <tr>
+                <td class="country-name">Thailand</td>
+                <td><span class="leader-name">Paetongtarn Shinawatra</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Thailand's youngest Prime Minister</td>
+            </tr>
+            <tr>
+                <td class="country-name">Philippines</td>
+                <td><span class="leader-name">Bongbong Marcos</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Son of former leader Ferdinand Marcos</td>
+            </tr>
+            <tr>
+                <td class="country-name">Singapore</td>
+                <td><span class="leader-name">Lawrence Wong</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Leads the 4G leadership transition</td>
+            </tr>
+            <tr>
+                <td class="country-name">Malaysia</td>
+                <td><span class="leader-name">Anwar Ibrahim</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Former opposition leader turned PM</td>
+            </tr>
+            <tr>
+                <td class="country-name">Afghanistan<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Hibatullah Akhundzada</span><br><small class="leader-type">Supreme Leader</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Reclusive leader of the Islamic Emirate</td>
+            </tr>
+            <tr>
+                <td class="country-name">Myanmar<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Min Aung Hlaing</span><br><small class="leader-type">Acting President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Military chief leading the junta government</td>
+            </tr>
+            <tr>
+                <td class="country-name">Sri Lanka<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Anura Kumara Dissanayake</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">First leftist president in Sri Lankan history</td>
+            </tr>
+            <tr>
+                <td class="country-name">Sri Lanka<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Harini Amarasuriya</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">First female PM in over 20 years</td>
+            </tr>
+            <tr>
+                <td class="country-name">Nepal<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">K.P. Sharma Oli</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Returned to power in a new coalition</td>
+            </tr>
+            <tr>
+                <td class="country-name">Bhutan<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Tshering Tobgay</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Known for environmental conservation focus</td>
+            </tr>
+            <tr>
+                <td class="country-name">Maldives<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Mohamed Muizzu</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Focuses on independent foreign policy</td>
+            </tr>
+            <tr>
+                <td class="country-name">Argentina</td>
+                <td><span class="leader-name">Javier Milei</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Federal Presidential Republic</td>
+                <td class="fact-col">Economist known for radical reforms</td>
+            </tr>
+            <tr>
+                <td class="country-name">Colombia</td>
+                <td><span class="leader-name">Gustavo Petro</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">First leftist president of Colombia</td>
+            </tr>
+            <tr>
+                <td class="country-name">Chile</td>
+                <td><span class="leader-name">Gabriel Boric</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Youngest president in Chilean history</td>
+            </tr>
+            <tr>
+                <td class="country-name">Venezuela</td>
+                <td><span class="leader-name">Nicolás Maduro</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Successor to Hugo Chávez</td>
+            </tr>
+            <tr>
+                <td class="country-name">Peru</td>
+                <td><span class="leader-name">Dina Boluarte</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">First female president of Peru</td>
+            </tr>
+            <tr>
+                <td class="country-name">Netherlands</td>
+                <td><span class="leader-name">Dick Schoof</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Former intelligence chief turned PM</td>
+            </tr>
+            <tr>
+                <td class="country-name">Belgium</td>
+                <td><span class="leader-name">Alexander De Croo</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Leads a complex multi-party coalition</td>
+            </tr>
+            <tr>
+                <td class="country-name">Sweden</td>
+                <td><span class="leader-name">Ulf Kristersson</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Led Sweden into NATO membership</td>
+            </tr>
+            <tr>
+                <td class="country-name">Norway</td>
+                <td><span class="leader-name">Jonas Gahr Støre</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Former foreign minister</td>
+            </tr>
+            <tr>
+                <td class="country-name">Denmark</td>
+                <td><span class="leader-name">Mette Frederiksen</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Denmark’s youngest Prime Minister</td>
+            </tr>
+            <tr>
+                <td class="country-name">Finland</td>
+                <td><span class="leader-name">Petteri Orpo</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Former finance minister</td>
+            </tr>
+            <tr>
+                <td class="country-name">Poland</td>
+                <td><span class="leader-name">Donald Tusk</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Former President of the European Council</td>
+            </tr>
+            <tr>
+                <td class="country-name">Greece</td>
+                <td><span class="leader-name">Kyriakos Mitsotakis</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Focuses on economic modernization</td>
+            </tr>
+            <tr>
+                <td class="country-name">Portugal</td>
+                <td><span class="leader-name">Luís Montenegro</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Leads a minority center-right government</td>
+            </tr>
+            <tr>
+                <td class="country-name">Ireland</td>
+                <td><span class="leader-name">Simon Harris</span><br><small class="leader-type">Taoiseach (PM)</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Ireland's youngest ever leader</td>
+            </tr>
+            <tr>
+                <td class="country-name">New Zealand</td>
+                <td><span class="leader-name">Christopher Luxon</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Former airline CEO turned politician</td>
+            </tr>
+            <tr>
+                <td class="country-name">Ethiopia</td>
+                <td><span class="leader-name">Abiy Ahmed</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Nobel Peace Prize laureate</td>
+            </tr>
+            <tr>
+                <td class="country-name">Kenya</td>
+                <td><span class="leader-name">William Ruto</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Focuses on 'bottom-up' economic model</td>
+            </tr>
+            <tr>
+                <td class="country-name">Ghana</td>
+                <td><span class="leader-name">Nana Akufo-Addo</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Prominent West African regional leader</td>
+            </tr>
+            <tr>
+                <td class="country-name">Rwanda</td>
+                <td><span class="leader-name">Paul Kagame</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Known for Rwanda’s post-genocide recovery</td>
+            </tr>
+            <tr>
+                <td class="country-name">Switzerland</td>
+                <td><span class="leader-name">Viola Amherd</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Rotational presidency position</td>
+            </tr>
+            <tr>
+                <td class="country-name">Austria</td>
+                <td><span class="leader-name">Karl Nehammer</span><br><small class="leader-type">Chancellor</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Former interior minister</td>
+            </tr>
+            <tr>
+                <td class="country-name">Iraq</td>
+                <td><span class="leader-name">Mohammed Shia' al-Sudani</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Focuses on infrastructure and stability</td>
+            </tr>
+            <tr>
+                <td class="country-name">Jordan</td>
+                <td><span class="leader-name">Abdullah II</span><br><small class="leader-type">King</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Key mediator in Middle East politics</td>
+            </tr>
+            <tr>
+                <td class="country-name">Morocco</td>
+                <td><span class="leader-name">Mohammed VI</span><br><small class="leader-type">King</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Direct descendant of the Alaouite dynasty</td>
+            </tr>
+            <tr>
+                <td class="country-name">Algeria</td>
+                <td><span class="leader-name">Abdelmadjid Tebboune</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Re-elected for a second term in 2024</td>
+            </tr>
+            <tr>
+                <td class="country-name">Syria</td>
+                <td><span class="leader-name">Bashar al-Assad</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Continues in contested rule</td>
+            </tr>
+            <tr>
+                <td class="country-name">Cuba</td>
+                <td><span class="leader-name">Miguel Díaz-Canel</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">One-party Socialist Republic</td>
+                <td class="fact-col">First non-Castro leader in decades</td>
+            </tr>
+            <tr>
+                <td class="country-name">Czech Republic</td>
+                <td><span class="leader-name">Petr Fiala</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Political scientist turned PM</td>
+            </tr>
+            <tr>
+                <td class="country-name">Hungary</td>
+                <td><span class="leader-name">Viktor Orbán</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">One of Europe’s longest-serving PMs</td>
+            </tr>
+            <tr>
+                <td class="country-name">Romania</td>
+                <td><span class="leader-name">Nicușor Dan</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Former mathematician and mayor</td>
+            </tr>
+            <tr>
+                <td class="country-name">Romania</td>
+                <td><span class="leader-name">Marcel Ciolacu</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Coalition power broker</td>
+            </tr>
+            <tr>
+                <td class="country-name">Bulgaria</td>
+                <td><span class="leader-name">Rossen Jeliazkov</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Leads coalition government</td>
+            </tr>
+            <tr>
+                <td class="country-name">Serbia</td>
+                <td><span class="leader-name">Aleksandar Vučić</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Dominant Serbian political figure</td>
+            </tr>
+            <tr>
+                <td class="country-name">Croatia</td>
+                <td><span class="leader-name">Andrej Plenković</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Former diplomat</td>
+            </tr>
+            <tr>
+                <td class="country-name">Slovakia</td>
+                <td><span class="leader-name">Robert Fico</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Returned after surviving political setbacks</td>
+            </tr>
+            <tr>
+                <td class="country-name">Slovenia</td>
+                <td><span class="leader-name">Robert Golob</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Former energy executive</td>
+            </tr>
+            <tr>
+                <td class="country-name">Belarus</td>
+                <td><span class="leader-name">Alexander Lukashenko</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Presidential Republic</td>
+                <td class="fact-col">Europe’s longest-ruling leader</td>
+            </tr>
+            <tr>
+                <td class="country-name">Lithuania</td>
+                <td><span class="leader-name">Gitanas Nausėda</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Former banker</td>
+            </tr>
+            <tr>
+                <td class="country-name">Latvia</td>
+                <td><span class="leader-name">Evika Siliņa</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">One of Latvia’s few female PMs</td>
+            </tr>
+            <tr>
+                <td class="country-name">Estonia</td>
+                <td><span class="leader-name">Kristen Michal</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Known for digital governance continuity</td>
+            </tr>
+            <tr>
+                <td class="country-name">Iceland</td>
+                <td><span class="leader-name">Kristrún Frostadóttir</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Young economist-turned-politician</td>
+            </tr>
+            <tr>
+                <td class="country-name">Luxembourg</td>
+                <td><span class="leader-name">Luc Frieden</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Returned after years in finance</td>
+            </tr>
+            <tr>
+                <td class="country-name">Malta</td>
+                <td><span class="leader-name">Robert Abela</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Constitutional lawyer by training</td>
+            </tr>
+            <tr>
+                <td class="country-name">Cyprus</td>
+                <td><span class="leader-name">Nikos Christodoulides</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Former foreign minister</td>
+            </tr>
+            <tr>
+                <td class="country-name">Tunisia</td>
+                <td><span class="leader-name">Kaïs Saïed</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Constitutional law professor before office</td>
+            </tr>
+            <tr>
+                <td class="country-name">Libya</td>
+                <td><span class="leader-name">Abdul Hamid Dbeibeh</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Interim unity government leader</td>
+            </tr>
+            <tr>
+                <td class="country-name">Sudan</td>
+                <td><span class="leader-name">Abdel Fattah al-Burhan</span><br><small class="leader-type">Sovereignty Council Chairman</small></td>
+                <td class="system-col">Republic / Parliamentary</td>
+                <td class="fact-col">Military leader during transitional period</td>
+            </tr>
+        </tbody>
     </table>
 
     <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Terminal</a>
