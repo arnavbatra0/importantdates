@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Leaders | Arnav Batra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .search-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        #leaderSearch {
+            width: 100%;
+            padding: 15px 20px;
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: var(--text-main);
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        #leaderSearch:focus {
+            border-color: var(--accent-yellow);
+            box-shadow: 0 0 10px rgba(255, 191, 0, 0.2);
+        }
+
+        .leader-table {
+            width: 100%;
+            max-width: 1100px;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+
+        .leader-table th, .leader-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        .leader-table th {
+            background-color: #1a1a1a;
+            color: var(--accent-yellow);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .country-name { font-weight: bold; color: var(--text-main); width: 20%; }
+        .leader-name { color: var(--accent-yellow); font-weight: bold; font-size: 1rem; }
+        .leader-type { color: #888; text-transform: uppercase; font-size: 0.7rem; }
+        .system-col { color: #ccc; font-style: italic; width: 15%; }
+        .fact-col { color: #aaa; font-size: 0.85rem; width: 35%; }
+
+        .imp-tag {
+            background: var(--accent-yellow);
+            color: #000;
+            font-size: 0.6rem;
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-left: 8px;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+
+        .back-home {
+            margin: 20px 0 40px;
+            text-decoration: none;
+            color: var(--text-dim);
+            display: inline-block;
+        }
+        .back-home:hover { color: var(--accent-yellow); }
+    </style>
+</head>
+<body>
+
+    <div class="top-credit">By Arnav Batra</div>
+
+    <div class="sticky-note">
+        <p>Data updated as of late 2024. For study purposes only.</p>
+    </div>
+
+    <header>
+        <h1>CURRENT WORLD LEADERS</h1>
+        <p>Heads of State & Government Around the Globe</p>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="leaderSearch" onkeyup="searchTable()" placeholder="Search by country, leader name, or title...">
+    </div>
+
+    <table class="leader-table" id="leaderTable">
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Leader & Title</th>
+                <th>Political System</th>
+                <th>Quick Fact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="country-name">India<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Narendra Modi</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Parliamentary Republic</td>
+                <td class="fact-col">One of India’s longest-serving PMs</td>
+            </tr>
+            <tr>
+                <td class="country-name">India<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Droupadi Murmu</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Parliamentary Republic</td>
+                <td class="fact-col">India’s first tribal woman president</td>
+            </tr>
+            <tr>
+                <td class="country-name">China<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Xi Jinping</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">One-party Socialist Republic</td>
+                <td class="fact-col">Most powerful Chinese leader in decades</td>
+            </tr>
+            <tr>
+                <td class="country-name">United States<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Donald Trump</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Federal Presidential Republic</td>
+                <td class="fact-col">Returned in a non-consecutive second presidency</td>
+            </tr>
+            <tr>
+                <td class="country-name">Pakistan<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Shehbaz Sharif</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Parliamentary Republic</td>
+                <td class="fact-col">Returned to office in a coalition era</td>
+            </tr>
+            <tr>
+                <td class="country-name">Russia<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Vladimir Putin</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Semi-presidential Republic</td>
+                <td class="fact-col">Among the longest-serving modern leaders</td>
+            </tr>
+            <tr>
+                <td class="country-name">Japan<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Naruhito</span><br><small class="leader-type">Emperor</small></td>
+                <td class="system-col">Constitutional Monarchy</td>
+                <td class="fact-col">First emperor born after World War II</td>
+            </tr>
+            <tr>
+                <td class="country-name">United Kingdom<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Keir Starmer</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Constitutional Monarchy</td>
+                <td class="fact-col">Former human rights lawyer</td>
+            </tr>
+            <tr>
+                <td class="country-name">France<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Emmanuel Macron</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Semi-presidential Republic</td>
+                <td class="fact-col">Youngest French president at first election</td>
+            </tr>
+            <tr>
+                <td class="country-name">Italy<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Giorgia Meloni</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Parliamentary Republic</td>
+                <td class="fact-col">Italy’s first female PM</td>
+            </tr>
+            <tr>
+                <td class="country-name">Israel<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Benjamin Netanyahu</span><br><small class="leader-type">Prime Minister</small></td>
+                <td class="system-col">Parliamentary Republic</td>
+                <td class="fact-col">Israel's longest-serving Prime Minister</td>
+            </tr>
+            <tr>
+                <td class="country-name">Saudi Arabia</td>
+                <td><span class="leader-name">Mohammed bin Salman</span><br><small class="leader-type">Crown Prince</small></td>
+                <td class="system-col">Absolute Monarchy</td>
+                <td class="fact-col">Architect of Vision 2030</td>
+            </tr>
+            <tr>
+                <td class="country-name">Ukraine<span class="imp-tag">Important</span></td>
+                <td><span class="leader-name">Volodymyr Zelenskyy</span><br><small class="leader-type">President</small></td>
+                <td class="system-col">Semi-presidential Republic</td>
+                <td class="fact-col">Former actor and comedian leading during wartime</td>
+            </tr>
+            <tr>
+                <td class="country-name">North Korea</td>
+                <td><span class="leader-name">Kim Jong Un</span><br><small class="leader-type">Supreme Leader</small></td>
+                <td class="system-col">One-party Socialist Republic</td>
+                <td class="fact-col">Successor to the Kim dynasty</td>
+            </tr>
+            </tbody>
+    </table>
+
+    <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Terminal</a>
+
+    <footer>
+        <p>© 2024 | Built for Students</p>
+    </footer>
+
+    <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, j, txtValue;
+            input = document.getElementById("leaderSearch");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("leaderTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 1; i < tr.length; i++) {
+                tr[i].style.display = "none";
+                td = tr[i].getElementsByTagName("td");
+                for (j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
