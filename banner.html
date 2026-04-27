@@ -1,0 +1,60 @@
+<div id="archive-banner" class="archive-banner">
+  <div class="archive-content">
+    <span>
+      🚧 This project is now archived and no longer maintained. Content is accurate up to May 2026.
+    </span>
+    <button onclick="dismissBanner()" class="archive-close">✕</button>
+  </div>
+</div>
+
+<style>
+.archive-banner {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  max-width: 320px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  font-family: system-ui, sans-serif;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+.archive-content {
+  display: flex;
+  gap: 10px;
+  align-items: start;
+}
+
+.archive-close {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.archive-close:hover {
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<script>
+function dismissBanner() {
+  document.getElementById("archive-banner").style.display = "none";
+  localStorage.setItem("archiveBannerDismissed", "true");
+}
+
+if (localStorage.getItem("archiveBannerDismissed") === "true") {
+  document.getElementById("archive-banner")?.remove();
+}
+</script>
