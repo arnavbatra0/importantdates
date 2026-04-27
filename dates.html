@@ -212,50 +212,28 @@
             });
         }
     </script>
-    <div id="banner-container"></div>
-
-<script>
-if (localStorage.getItem("archiveBannerDismissed") !== "true") {
-
-  const banner = document.createElement("div");
-  banner.innerHTML = `
-    <div id="archive-banner" style="
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      max-width: 320px;
-      background: #111;
-      color: #fff;
-      border: 1px solid #333;
-      border-radius: 12px;
-      padding: 12px 14px;
+ <script>
+  if (localStorage.getItem("archiveBannerDismissed") !== "true") {
+    const banner = document.createElement("div");
+    banner.id = "archive-banner";
+    banner.style.cssText = `
+      position: fixed; bottom: 20px; right: 20px; max-width: 320px;
+      background: #111; color: #fff; border: 1px solid #333;
+      border-radius: 12px; padding: 12px 14px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-      font-family: system-ui, sans-serif;
-      z-index: 9999;
-      display: flex;
-      gap: 10px;
-      align-items: start;
-    ">
-      <span style="flex:1;">
-        🚧 This project is now archived and no longer maintained. Content is accurate up to May 2026.
-      </span>
-      <button id="archive-close" style="
-        background: none;
-        border: none;
-        color: #aaa;
-        font-size: 16px;
-        cursor: pointer;
-      ">✕</button>
-    </div>
-  `;
-
-  document.body.appendChild(banner);
-
-  document.getElementById("archive-close").onclick = () => {
-    document.getElementById("archive-banner").remove();
-    localStorage.setItem("archiveBannerDismissed", "true");
-  };
-}
+      font-family: system-ui, sans-serif; z-index: 9999;
+      display: flex; gap: 10px; align-items: start;
+    `;
+    banner.innerHTML = `
+      <span style="flex:1;">🚧 This project is archived. Content accurate up to May 2026.</span>
+      <button id="archive-close" style="background:none;border:none;color:#aaa;font-size:16px;cursor:pointer;">✕</button>
+    `;
+    document.body.appendChild(banner);
+    document.getElementById("archive-close").onclick = () => {
+      banner.remove();
+      localStorage.setItem("archiveBannerDismissed", "true");
+    };
+  }
 </script>
 </body>
 </html>
