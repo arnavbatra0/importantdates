@@ -79,6 +79,14 @@
         </div>
         <p>© 2026 | Built for Students | By Arnav Batra</p>
     </footer>
+<div id="banner-container"></div>
 
+<script>
+fetch('/banner.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('banner-container').innerHTML = data;
+  });
+</script>
 </body>
 </html>
