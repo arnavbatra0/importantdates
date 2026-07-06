@@ -79,10 +79,5 @@
 function dismissBanner() {
   const banner = document.getElementById("archive-banner");
   if (banner) banner.remove();
-  localStorage.setItem("archiveBannerDismissed", "true");
-}
-
-if (localStorage.getItem("archiveBannerDismissed") === "true") {
-  document.getElementById("archive-banner")?.remove();
 }
 </script>
